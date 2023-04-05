@@ -53,15 +53,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "386
 [; ;app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h: 386: int16_t TCP_GetReceivedData(tcpTCB_t *tcbPtr);
 [v _TCP_GetReceivedData `(s ~T0 @X0 0 ef1`*S463 ]
-"33 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
-[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-"338 app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h
+"338
 [; ;app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h: 338: error_msg TCP_Send(tcpTCB_t *tcbPtr, uint8_t *data, uint16_t dataLen);
 [v _TCP_Send `(E4089 ~T0 @X0 0 ef3`*S463`*uc`us ]
-"54 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 54: size_t strlen (const char *);
-[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 55: __asm("MAADR5 equ 0E80h");
 [; <" MAADR5 equ 0E80h ;# ">
@@ -1008,95 +1002,69 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;app_files/tcp_server_demo.c: 97:                         case 0x18:
 [e :U 474 ]
 "98
-[; ;app_files/tcp_server_demo.c: 98:                             strcpy(txdataPort7,"sw version");
-[e ( _strcpy (2 , -> &U F4893 `*uc :s 1C ]
+[; ;app_files/tcp_server_demo.c: 98:                             if(rxdataPort7[1] == 0x18)
+[e $ ! == -> *U + &U F4892 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4892 `ui `ux `i -> 24 `i 475  ]
 "99
-[; ;app_files/tcp_server_demo.c: 99:                             break;
-[e $U 472  ]
+[; ;app_files/tcp_server_demo.c: 99:                             {
+{
 "100
-[; ;app_files/tcp_server_demo.c: 100:                         case 0x24:
-[e :U 475 ]
+[; ;app_files/tcp_server_demo.c: 100:                                 txdataPort7[0] = 0x18;
+[e = *U + &U F4893 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4893 `ui `ux -> -> 24 `i `uc ]
 "101
-[; ;app_files/tcp_server_demo.c: 101:                             strcpy(txdataPort7,"uart");
-[e ( _strcpy (2 , -> &U F4893 `*uc :s 2C ]
+[; ;app_files/tcp_server_demo.c: 101:                                 txdataPort7[1] = 0x18;
+[e = *U + &U F4893 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4893 `ui `ux -> -> 24 `i `uc ]
+"102
+[; ;app_files/tcp_server_demo.c: 102:                                 txdataPort7[2] = 0x63;
+[e = *U + &U F4893 * -> -> -> 2 `i `ui `ux -> -> # *U &U F4893 `ui `ux -> -> 99 `i `uc ]
 "103
-[; ;app_files/tcp_server_demo.c: 103:                             break;
-[e $U 472  ]
+[; ;app_files/tcp_server_demo.c: 103:                                 txdataPort7[3] = 0x05;
+[e = *U + &U F4893 * -> -> -> 3 `i `ui `ux -> -> # *U &U F4893 `ui `ux -> -> 5 `i `uc ]
 "104
-[; ;app_files/tcp_server_demo.c: 104:                         case 0x3c:
-[e :U 476 ]
-"105
-[; ;app_files/tcp_server_demo.c: 105:                             strcpy(txdataPort7,"d/a");
-[e ( _strcpy (2 , -> &U F4893 `*uc :s 3C ]
+[; ;app_files/tcp_server_demo.c: 104:                             }
+}
+[e :U 475 ]
 "106
 [; ;app_files/tcp_server_demo.c: 106:                             break;
 [e $U 472  ]
-"107
-[; ;app_files/tcp_server_demo.c: 107:                         case 0x42:
-[e :U 477 ]
-"108
-[; ;app_files/tcp_server_demo.c: 108:                             strcpy(txdataPort7,"a/d");
-[e ( _strcpy (2 , -> &U F4893 `*uc :s 4C ]
-"109
-[; ;app_files/tcp_server_demo.c: 109:                             break;
-[e $U 472  ]
-"110
-[; ;app_files/tcp_server_demo.c: 110:                         case 0x5a:
-[e :U 478 ]
-"111
-[; ;app_files/tcp_server_demo.c: 111:                             strcpy(txdataPort7,"dio");
-[e ( _strcpy (2 , -> &U F4893 `*uc :s 5C ]
-"112
-[; ;app_files/tcp_server_demo.c: 112:                             break;
-[e $U 472  ]
-"115
-[; ;app_files/tcp_server_demo.c: 115:                     }
+"122
+[; ;app_files/tcp_server_demo.c: 122:                     }
 }
 [e $U 472  ]
 [e :U 473 ]
 [e [\ -> *U + &U F4892 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4892 `ui `ux `i , $ -> 24 `i 474
- , $ -> 36 `i 475
- , $ -> 60 `i 476
- , $ -> 66 `i 477
- , $ -> 90 `i 478
  472 ]
 [e :U 472 ]
-"125
-[; ;app_files/tcp_server_demo.c: 125:                     TCP_Send(&port7TCB,txdataPort7,strlen(txdataPort7));
-[e ( _TCP_Send (3 , , &U F4891 &U F4893 -> ( _strlen (1 -> &U F4893 `*Cuc `us ]
-"127
-[; ;app_files/tcp_server_demo.c: 127:                 }
+"132
+[; ;app_files/tcp_server_demo.c: 132:                     TCP_Send(&port7TCB,txdataPort7,4);
+[e ( _TCP_Send (3 , , &U F4891 &U F4893 -> -> 4 `i `us ]
+"134
+[; ;app_files/tcp_server_demo.c: 134:                 }
 }
 [e :U 471 ]
-"128
-[; ;app_files/tcp_server_demo.c: 128:             }
+"135
+[; ;app_files/tcp_server_demo.c: 135:             }
 }
 [e :U 470 ]
-"129
-[; ;app_files/tcp_server_demo.c: 129:             break;
+"136
+[; ;app_files/tcp_server_demo.c: 136:             break;
 [e $U 465  ]
-"130
-[; ;app_files/tcp_server_demo.c: 130:         default:
-[e :U 479 ]
-"132
-[; ;app_files/tcp_server_demo.c: 132:             break;
+"137
+[; ;app_files/tcp_server_demo.c: 137:         default:
+[e :U 476 ]
+"139
+[; ;app_files/tcp_server_demo.c: 139:             break;
 [e $U 465  ]
-"133
-[; ;app_files/tcp_server_demo.c: 133:     }
+"140
+[; ;app_files/tcp_server_demo.c: 140:     }
 }
 [e $U 465  ]
 [e :U 466 ]
 [e [\ -> _socket_state `ui , $ -> . `E4803 0 `ui 467
  , $ -> . `E4803 1 `ui 468
  , $ -> . `E4803 3 `ui 469
- 479 ]
+ 476 ]
 [e :U 465 ]
-"134
-[; ;app_files/tcp_server_demo.c: 134: }
+"141
+[; ;app_files/tcp_server_demo.c: 141: }
 [e :UE 464 ]
 }
-[a 2C 117 97 114 116 0 ]
-[a 5C 100 105 111 0 ]
-[a 1C 115 119 32 118 101 114 115 105 111 110 0 ]
-[a 4C 97 47 100 0 ]
-[a 3C 100 47 97 0 ]

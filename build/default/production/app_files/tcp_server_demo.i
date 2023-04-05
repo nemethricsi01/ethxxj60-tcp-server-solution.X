@@ -7960,26 +7960,19 @@ void TCP_Demo_EchoServer(void)
                     switch(rxdataPort7[0])
                     {
                         case 0x18:
-                            strcpy(txdataPort7,"sw version");
-                            break;
-                        case 0x24:
-                            strcpy(txdataPort7,"uart");
+                            if(rxdataPort7[1] == 0x18)
+                            {
+                                txdataPort7[0] = 0x18;
+                                txdataPort7[1] = 0x18;
+                                txdataPort7[2] = 0x63;
+                                txdataPort7[3] = 0x05;
+                            }
 
                             break;
-                        case 0x3c:
-                            strcpy(txdataPort7,"d/a");
-                            break;
-                        case 0x42:
-                            strcpy(txdataPort7,"a/d");
-                            break;
-                        case 0x5a:
-                            strcpy(txdataPort7,"dio");
-                            break;
-
-
+# 122 "app_files/tcp_server_demo.c"
                     }
-# 125 "app_files/tcp_server_demo.c"
-                    TCP_Send(&port7TCB,txdataPort7,strlen(txdataPort7));
+# 132 "app_files/tcp_server_demo.c"
+                    TCP_Send(&port7TCB,txdataPort7,4);
 
                 }
             }
