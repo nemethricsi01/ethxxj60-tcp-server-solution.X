@@ -7500,13 +7500,13 @@ void main(void)
 
 
 
-    TRISFbits.RF1 = 0;
+    TRISBbits.RB4 = 0;
 # 78 "main.c"
     while (1)
     {
         Network_Manage();
         TCP_Demo_EchoServer();
-        LATFbits.LATF1 ^= 1;
+        LATBbits.LATB4 ^= 1;
 
     }
 }

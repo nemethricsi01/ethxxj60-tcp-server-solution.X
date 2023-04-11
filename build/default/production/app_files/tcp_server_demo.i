@@ -7969,9 +7969,12 @@ void TCP_Demo_EchoServer(void)
                             }
 
                             break;
-# 122 "app_files/tcp_server_demo.c"
+                        default:
+                            memset(txdataPort7,0,sizeof(txdataPort7));
+                            break;
                     }
-# 132 "app_files/tcp_server_demo.c"
+                    TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof(rxdataPort7));
+
                     TCP_Send(&port7TCB,txdataPort7,4);
 
                 }

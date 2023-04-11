@@ -30,42 +30,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10816
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 10816: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS430 ~T0 @X0 0 e@4082 ]
-"5237
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 5237:     struct {
-[s S189 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S189 . . TRISF1 TRISF2 TRISF3 TRISF4 TRISF5 TRISF6 TRISF7 ]
-"5247
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 5247:     struct {
-[s S190 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S190 . . RF1 RF2 RF3 RF4 RF5 RF6 RF7 ]
-"5236
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 5236: typedef union {
-[u S188 `S189 1 `S190 1 ]
-[n S188 . . . ]
-"5258
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 5258: extern volatile TRISFbits_t TRISFbits __attribute__((address(0xF97)));
-[v _TRISFbits `VS188 ~T0 @X0 0 e@3991 ]
+"4517
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4517:     struct {
+[s S165 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S165 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"4527
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4527:     struct {
+[s S166 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S166 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"4516
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4516: typedef union {
+[u S164 `S165 1 `S166 1 ]
+[n S164 . . . ]
+"4538
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4538: extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
+[v _TRISBbits `VS164 ~T0 @X0 0 e@3987 ]
 "104 ./mcc_generated_files/TCPIPLibrary/network.h
 [; ;./mcc_generated_files/TCPIPLibrary/network.h: 104: void Network_Manage(void);
 [v _Network_Manage `(v ~T0 @X0 0 ef ]
 "39 ./app_files/tcp_server_demo.h
 [; ;./app_files/tcp_server_demo.h: 39: void TCP_Demo_EchoServer(void);
 [v _TCP_Demo_EchoServer `(v ~T0 @X0 0 ef ]
-"4206 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4206:     struct {
-[s S153 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S153 . . LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
-"4216
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4216:     struct {
-[s S154 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S154 . . LF1 LF2 LF3 LF4 LF5 LF6 LF7 ]
-"4205
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4205: typedef union {
-[u S152 `S153 1 `S154 1 ]
-[n S152 . . . ]
-"4227
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4227: extern volatile LATFbits_t LATFbits __attribute__((address(0xF8E)));
-[v _LATFbits `VS152 ~T0 @X0 0 e@3982 ]
+"3842 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 3842:     struct {
+[s S141 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S141 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"3852
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 3852:     struct {
+[s S142 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S142 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
+"3841
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 3841: typedef union {
+[u S140 `S141 1 `S142 1 ]
+[n S140 . . . ]
+"3863
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 3863: extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
+[v _LATBbits `VS140 ~T0 @X0 0 e@3978 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 55: __asm("MAADR5 equ 0E80h");
 [; <" MAADR5 equ 0E80h ;# ">
@@ -892,8 +892,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 65:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "69
-[; ;main.c: 69:     TRISFbits.RF1 = 0;
-[e = . . _TRISFbits 1 1 -> -> 0 `i `uc ]
+[; ;main.c: 69:     TRISBbits.RB4 = 0;
+[e = . . _TRISBbits 1 4 -> -> 0 `i `uc ]
 "78
 [; ;main.c: 78:     while (1)
 [e :U 457 ]
@@ -907,8 +907,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 81:         TCP_Demo_EchoServer();
 [e ( _TCP_Demo_EchoServer ..  ]
 "82
-[; ;main.c: 82:         LATFbits.LATF1 ^= 1;
-[e =^ . . _LATFbits 0 1 -> -> 1 `i `Vuc ]
+[; ;main.c: 82:         LATBbits.LATB4 ^= 1;
+[e =^ . . _LATBbits 0 4 -> -> 1 `i `Vuc ]
 "84
 [; ;main.c: 84:     }
 }

@@ -30,13 +30,6 @@
 /*******************************************************************************/
                             /* TCP Demo */
 /*******************************************************************************/
-static char response[10][20] = { "SW version","uart","d/a","a/d","dio"};
-//static uint8_t uartbuf[20]; 
-//void Uart_SendChar(uint8_t data)
-//{
-//    TXREG1 = data;
-//    while(TXSTA1bits.TRMT != 1);
-//}
 //Implement an echo server over TCP
 void TCP_Demo_EchoServer(void)
 {
@@ -104,30 +97,11 @@ void TCP_Demo_EchoServer(void)
                             }
                             
                             break;
-//                        case 0x24:
-//                            strcpy(txdataPort7,"uart");
-////                            printf("hello");
-//                            break;
-//                        case 0x3c:
-//                            strcpy(txdataPort7,"d/a");
-//                            break;
-//                        case 0x42:
-//                            strcpy(txdataPort7,"a/d");
-//                            break;
-//                        case 0x5a:
-//                            strcpy(txdataPort7,"dio");
-//                            break;    
-
-                        
+                        default:
+                            memset(txdataPort7,0,sizeof(txdataPort7));
+                            break;
                     }
-//                    for(i = 0; i < rxLen; i++)
-//                    {
-//                        txdataPort7[i] = rxdataPort7[i];
-//                    }
-                       
-                    // reuse the RX buffer
-                    
-                   
+                    TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof(rxdataPort7));
                     // Send data back to the Source
                     TCP_Send(&port7TCB,txdataPort7,4);
                     
@@ -139,8 +113,3 @@ void TCP_Demo_EchoServer(void)
             break;
     }
 }
-
-//void putch(char txData)
-//{    
-//    Uart_SendChar(txData);
-//}

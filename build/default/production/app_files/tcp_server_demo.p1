@@ -53,7 +53,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "386
 [; ;app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h: 386: int16_t TCP_GetReceivedData(tcpTCB_t *tcbPtr);
 [v _TCP_GetReceivedData `(s ~T0 @X0 0 ef1`*S463 ]
-"338
+"29 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"338 app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h
 [; ;app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h: 338: error_msg TCP_Send(tcpTCB_t *tcbPtr, uint8_t *data, uint16_t dataLen);
 [v _TCP_Send `(E4089 ~T0 @X0 0 ef3`*S463`*uc`us ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
@@ -1026,45 +1029,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 "106
 [; ;app_files/tcp_server_demo.c: 106:                             break;
 [e $U 472  ]
-"122
-[; ;app_files/tcp_server_demo.c: 122:                     }
+"107
+[; ;app_files/tcp_server_demo.c: 107:                         default:
+[e :U 476 ]
+"108
+[; ;app_files/tcp_server_demo.c: 108:                             memset(txdataPort7,0,sizeof(txdataPort7));
+[e ( _memset (3 , , -> &U F4893 `*v -> 0 `i -> # F4893 `ui ]
+"109
+[; ;app_files/tcp_server_demo.c: 109:                             break;
+[e $U 472  ]
+"110
+[; ;app_files/tcp_server_demo.c: 110:                     }
 }
 [e $U 472  ]
 [e :U 473 ]
 [e [\ -> *U + &U F4892 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4892 `ui `ux `i , $ -> 24 `i 474
- 472 ]
+ 476 ]
 [e :U 472 ]
-"132
-[; ;app_files/tcp_server_demo.c: 132:                     TCP_Send(&port7TCB,txdataPort7,4);
+"111
+[; ;app_files/tcp_server_demo.c: 111:                     TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof(rxdataPort7));
+[e ( _TCP_InsertRxBuffer (3 , , &U F4891 &U F4892 -> -> # F4892 `ui `us ]
+"113
+[; ;app_files/tcp_server_demo.c: 113:                     TCP_Send(&port7TCB,txdataPort7,4);
 [e ( _TCP_Send (3 , , &U F4891 &U F4893 -> -> 4 `i `us ]
-"134
-[; ;app_files/tcp_server_demo.c: 134:                 }
+"115
+[; ;app_files/tcp_server_demo.c: 115:                 }
 }
 [e :U 471 ]
-"135
-[; ;app_files/tcp_server_demo.c: 135:             }
+"116
+[; ;app_files/tcp_server_demo.c: 116:             }
 }
 [e :U 470 ]
-"136
-[; ;app_files/tcp_server_demo.c: 136:             break;
+"117
+[; ;app_files/tcp_server_demo.c: 117:             break;
 [e $U 465  ]
-"137
-[; ;app_files/tcp_server_demo.c: 137:         default:
-[e :U 476 ]
-"139
-[; ;app_files/tcp_server_demo.c: 139:             break;
+"118
+[; ;app_files/tcp_server_demo.c: 118:         default:
+[e :U 477 ]
+"120
+[; ;app_files/tcp_server_demo.c: 120:             break;
 [e $U 465  ]
-"140
-[; ;app_files/tcp_server_demo.c: 140:     }
+"121
+[; ;app_files/tcp_server_demo.c: 121:     }
 }
 [e $U 465  ]
 [e :U 466 ]
 [e [\ -> _socket_state `ui , $ -> . `E4803 0 `ui 467
  , $ -> . `E4803 1 `ui 468
  , $ -> . `E4803 3 `ui 469
- 476 ]
+ 477 ]
 [e :U 465 ]
-"141
-[; ;app_files/tcp_server_demo.c: 141: }
+"122
+[; ;app_files/tcp_server_demo.c: 122: }
 [e :UE 464 ]
 }

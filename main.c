@@ -66,7 +66,7 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    TRISFbits.RF1 = 0;
+    TRISBbits.RB4 = 0;
 //    TRISCbits.RC6 = 0;
 //    //setup for uart
 //    TXSTA1bits.TXEN = 1;
@@ -79,7 +79,7 @@ void main(void)
     {
         Network_Manage();
         TCP_Demo_EchoServer();
-        LATFbits.LATF1 ^= 1;
+        LATBbits.LATB4 ^= 1;
         //__delay_ms(100);
     }
 }
