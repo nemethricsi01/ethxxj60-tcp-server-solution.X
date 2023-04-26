@@ -7480,6 +7480,39 @@ void TCP_Demo_EchoServer(void);
 
 
 
+void spi_init(void)
+    {
+        SSP1CON1bits.SSPEN = 1;
+        SSP1CON1bits.SSPM = 1;
+    }
+
+void FlashRead(void)
+{
+    int i;
+    int temp;
+    LATFbits.LATF7 = 0;
+    temp = SSP1BUF;
+    SSP1BUF = 0x52;
+    while(PIR1bits.SSPIF != 1);
+    PIR1bits.SSPIF = 0;
+    for(i = 0; i< 3;i++)
+    {
+        SSP1BUF = 0x00;
+    while(PIR1bits.SSPIF != 1);
+    PIR1bits.SSPIF = 0;
+    }
+    for(i = 0; i< 4;i++)
+    {
+        SSP1BUF = 0x00;
+    while(PIR1bits.SSPIF != 1);
+    PIR1bits.SSPIF = 0;
+    }
+    SSP1BUF = 0x00;
+    while(PIR1bits.SSPIF != 1);
+    PIR1bits.SSPIF = 0;
+    temp = SSP1BUF;
+    LATFbits.LATF7 = 1;
+}
 void main(void)
 {
 
@@ -7501,12 +7534,32 @@ void main(void)
 
 
     TRISBbits.RB4 = 0;
-# 78 "main.c"
+    TRISCbits.RC6 = 0;
+    TRISCbits.RC3 = 0;
+    TRISCbits.RC5 = 0;
+    TRISCbits.RC4 = 1;
+    TRISFbits.RF7 = 0;
+
+    TXSTA1bits.TXEN = 1;
+    RCSTA1bits.SPEN = 1;
+
+    BAUDCON1bits.BRG16 = 1;
+    TXSTA1bits.BRGH = 1;
+    SPBRG = 53;
+
+    spi_init();
+
+
+
+
     while (1)
     {
         Network_Manage();
         TCP_Demo_EchoServer();
         LATBbits.LATB4 ^= 1;
+        TXREG1 = 'a';
+        while (TXSTA1bits.TRMT != 1);
+        FlashRead();
 
     }
 }

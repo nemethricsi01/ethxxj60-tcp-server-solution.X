@@ -46,6 +46,39 @@
 /*
                          Main application
  */
+void spi_init(void)
+    {
+        SSP1CON1bits.SSPEN = 1;
+        SSP1CON1bits.SSPM = 1;//clk:fosc/16
+    }
+
+void FlashRead(void)
+{
+    int i;
+    int temp;
+    LATFbits.LATF7 = 0;
+    temp = SSP1BUF;
+    SSP1BUF = 0x52;
+    while(PIR1bits.SSPIF != 1);
+    PIR1bits.SSPIF = 0;
+    for(i = 0; i< 3;i++)
+    {
+        SSP1BUF = 0x00;//ADR 0
+    while(PIR1bits.SSPIF != 1);
+    PIR1bits.SSPIF = 0;
+    }
+    for(i = 0; i< 4;i++)
+    {
+        SSP1BUF = 0x00;//ADR 0
+    while(PIR1bits.SSPIF != 1);
+    PIR1bits.SSPIF = 0;
+    }
+    SSP1BUF = 0x00;//ADR 0
+    while(PIR1bits.SSPIF != 1);
+    PIR1bits.SSPIF = 0;
+    temp = SSP1BUF;
+    LATFbits.LATF7 = 1;
+}
 void main(void)
 {
     // Initialize the device
@@ -67,19 +100,32 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     TRISBbits.RB4 = 0;
-//    TRISCbits.RC6 = 0;
-//    //setup for uart
-//    TXSTA1bits.TXEN = 1;
-//    RCSTA1bits.SPEN = 1;
-//    //brgh = 1  brg16 = 1 
-//    BAUDCON1bits.BRG16 = 1;
-//    TXSTA1bits.BRGH = 1;
-//    SPBRG = 53;//115200bps
+    TRISCbits.RC6 = 0;
+    TRISCbits.RC3 = 0;//sck
+    TRISCbits.RC5 = 0;//sdo
+    TRISCbits.RC4 = 1;//sdi
+    TRISFbits.RF7 = 0;//CS
+    //setup for uart
+    TXSTA1bits.TXEN = 1;
+    RCSTA1bits.SPEN = 1;
+    //brgh = 1  brg16 = 1 
+    BAUDCON1bits.BRG16 = 1;
+    TXSTA1bits.BRGH = 1;
+    SPBRG = 53;//115200bps
+    
+    spi_init();
+    
+    
+    
+    
     while (1)
     {
         Network_Manage();
         TCP_Demo_EchoServer();
         LATBbits.LATB4 ^= 1;
+        TXREG1 = 'a';
+        while (TXSTA1bits.TRMT != 1);
+        FlashRead();
         //__delay_ms(100);
     }
 }

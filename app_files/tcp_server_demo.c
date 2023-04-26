@@ -28,20 +28,20 @@
 #include "../mcc_generated_files/TCPIPLibrary/tcpv4.h"
 
 /*******************************************************************************/
-                            /* TCP Demo */
+/* TCP Demo */
 /*******************************************************************************/
 //Implement an echo server over TCP
-void TCP_Demo_EchoServer(void)
-{
+
+void TCP_Demo_EchoServer(void) {
     // Create the socket for the TCP Server
     static tcpTCB_t port7TCB;
-    
-   
+
+
 
     // Create the TX and RX Server's buffers
     static uint8_t rxdataPort7[20];
     static uint8_t txdataPort7[20];
-    
+
 
     uint16_t rxLen, txLen, i;
     socketState_t socket_state;
@@ -49,62 +49,75 @@ void TCP_Demo_EchoServer(void)
 
     // Check the status of the Socket
     socket_state = TCP_SocketPoll(&port7TCB);
-//    -	NOT_A_SOCKET? ? the socket was not initialized
-//    - SOCKET_CLOSED? ? the socket is initialized but is closed
-//    - SOCKET_CONNECTED? ? the socket is connected and the data can be exchanged with remote machine
+    //    -	NOT_A_SOCKET? ? the socket was not initialized
+    //    - SOCKET_CLOSED? ? the socket is initialized but is closed
+    //    - SOCKET_CONNECTED? ? the socket is connected and the data can be exchanged with remote machine
 
-    switch(socket_state)
-    {
+    switch (socket_state) {
         case NOT_A_SOCKET:
             // Inserting and Initializing the socket
-            
-         TCP_SocketInit(&port7TCB);   
+
+            TCP_SocketInit(&port7TCB);
             break;
         case SOCKET_CLOSED:
 
             // Configure the local port
-         TCP_Bind(&port7TCB,7);   
+            TCP_Bind(&port7TCB, 7);
 
-          
+
             //  Add receive buffer 
-            TCP_InsertRxBuffer(&port7TCB, rxdataPort7,sizeof(rxdataPort7));
+            TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
 
             //  Start the TCP server: Listen on port
             TCP_Listen(&port7TCB);
 
-           
+
             break;
         case SOCKET_CONNECTED:
             // check if the buffer was sent, if yes we can send another buffer
-            if(TCP_SendDone(&port7TCB))
-            {
+            if (TCP_SendDone(&port7TCB)) {
                 // check to see  if there are any received data
                 rxLen = TCP_GetRxLength(&port7TCB);
-                if(rxLen > 0)
-                {
+                if (rxLen > 0) {
                     rxLen = TCP_GetReceivedData(&port7TCB);
 
                     //simulate some buffer processing
-                    switch(rxdataPort7[0])
-                    {
+                    switch (rxdataPort7[0]) {
                         case 0x18:
-                            if(rxdataPort7[1] == 0x18)
+                            if (rxdataPort7[1] == 0x18) 
                             {
                                 txdataPort7[0] = 0x18;
                                 txdataPort7[1] = 0x18;
                                 txdataPort7[2] = 0x63;
                                 txdataPort7[3] = 0x05;
+                                datalen = 4;
                             }
-                            
+
+                            break;
+                        case 0x5A:
+                            if (rxdataPort7[1] == 0x18) 
+                            {
+                                txdataPort7[0] = 0x5A;
+                                txdataPort7[1] = 0x18;
+                                datalen = 2;
+                            }
+                            if (rxdataPort7[1] == 0x24) 
+                            {
+                                txdataPort7[0] = 0x5A;
+                                txdataPort7[1] = 0x24;
+                                txdataPort7[2] = 0x55;
+                                datalen = 3;
+                            }
                             break;
                         default:
-                            memset(txdataPort7,0,sizeof(txdataPort7));
+                            memset(txdataPort7, 0, sizeof (txdataPort7));
+                            datalen = 4;
                             break;
                     }
-                    TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof(rxdataPort7));
+                    TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
                     // Send data back to the Source
-                    TCP_Send(&port7TCB,txdataPort7,4);
-                    
+                    TCP_Send(&port7TCB, txdataPort7, datalen);
+
                 }
             }
             break;

@@ -7895,16 +7895,9 @@ void TCP_Update(void);
 
 
 
-static char response[10][20] = { "SW version","uart","d/a","a/d","dio"};
 
 
-
-
-
-
-
-void TCP_Demo_EchoServer(void)
-{
+void TCP_Demo_EchoServer(void) {
 
     static tcpTCB_t port7TCB;
 
@@ -7925,21 +7918,20 @@ void TCP_Demo_EchoServer(void)
 
 
 
-    switch(socket_state)
-    {
+    switch (socket_state) {
         case NOT_A_SOCKET:
 
 
-         TCP_SocketInit(&port7TCB);
+            TCP_SocketInit(&port7TCB);
             break;
         case SOCKET_CLOSED:
 
 
-         TCP_Bind(&port7TCB,7);
+            TCP_Bind(&port7TCB, 7);
 
 
 
-            TCP_InsertRxBuffer(&port7TCB, rxdataPort7,sizeof(rxdataPort7));
+            TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
 
 
             TCP_Listen(&port7TCB);
@@ -7948,34 +7940,48 @@ void TCP_Demo_EchoServer(void)
             break;
         case SOCKET_CONNECTED:
 
-            if(TCP_SendDone(&port7TCB))
-            {
+            if (TCP_SendDone(&port7TCB)) {
 
                 rxLen = TCP_GetRxLength(&port7TCB);
-                if(rxLen > 0)
-                {
+                if (rxLen > 0) {
                     rxLen = TCP_GetReceivedData(&port7TCB);
 
 
-                    switch(rxdataPort7[0])
-                    {
+                    switch (rxdataPort7[0]) {
                         case 0x18:
-                            if(rxdataPort7[1] == 0x18)
+                            if (rxdataPort7[1] == 0x18)
                             {
                                 txdataPort7[0] = 0x18;
                                 txdataPort7[1] = 0x18;
                                 txdataPort7[2] = 0x63;
                                 txdataPort7[3] = 0x05;
+                                datalen = 4;
                             }
 
                             break;
+                        case 0x5A:
+                            if (rxdataPort7[1] == 0x18)
+                            {
+                                txdataPort7[0] = 0x5A;
+                                txdataPort7[1] = 0x18;
+                                datalen = 2;
+                            }
+                            if (rxdataPort7[1] == 0x24)
+                            {
+                                txdataPort7[0] = 0x5A;
+                                txdataPort7[1] = 0x24;
+                                txdataPort7[2] = 0x55;
+                                datalen = 3;
+                            }
+                            break;
                         default:
-                            memset(txdataPort7,0,sizeof(txdataPort7));
+                            memset(txdataPort7, 0, sizeof (txdataPort7));
+                            datalen = 4;
                             break;
                     }
-                    TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof(rxdataPort7));
+                    TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
 
-                    TCP_Send(&port7TCB,txdataPort7,4);
+                    TCP_Send(&port7TCB, txdataPort7, datalen);
 
                 }
             }

@@ -6,6 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="app_files" projectFiles="true">
         <itemPath>app_files/tcp_server_demo.h</itemPath>
+        <itemPath>app_files/DIO.h</itemPath>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
@@ -53,6 +54,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="app_files" projectFiles="true">
         <itemPath>app_files/tcp_server_demo.c</itemPath>
+        <itemPath>app_files/DIO.c</itemPath>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
