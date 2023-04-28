@@ -26,6 +26,7 @@
 #include <stdio.h>
 #include "tcp_server_demo.h"
 #include "../mcc_generated_files/TCPIPLibrary/tcpv4.h"
+#include "DIO.h"
 
 /*******************************************************************************/
 /* TCP Demo */
@@ -95,17 +96,25 @@ void TCP_Demo_EchoServer(void) {
 
                             break;
                         case 0x5A:
-                            if (rxdataPort7[1] == 0x18) 
+                            if (rxdataPort7[1] == 0x18)//DIO set port state
                             {
                                 txdataPort7[0] = 0x5A;
                                 txdataPort7[1] = 0x18;
+                                DIO_Write(rxdataPort7[2]);
                                 datalen = 2;
                             }
-                            if (rxdataPort7[1] == 0x24) 
+                            if (rxdataPort7[1] == 0x24)//DIO get port state 
                             {
                                 txdataPort7[0] = 0x5A;
                                 txdataPort7[1] = 0x24;
-                                txdataPort7[2] = 0x55;
+                                txdataPort7[2] = DIO_Read();
+                                datalen = 3;
+                            }
+                            if (rxdataPort7[1] == 0x30)//DIO setIO
+                            {
+                                txdataPort7[0] = 0x5A;
+                                txdataPort7[1] = 0x24;
+                                DIO_SetIO(rxdataPort7[2]);
                                 datalen = 3;
                             }
                             break;

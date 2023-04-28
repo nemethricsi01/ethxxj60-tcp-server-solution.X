@@ -2,20 +2,6 @@
 #include "DIO.h"
 
 void DIO_Write(uint8_t value) {
-    switch (value) {
-        case 1:
-            break;
-            DIO1_TRIS = 0;
-        case 2:
-            DIO2_TRIS = 0;
-            break;
-        case 4:
-            DIO3_TRIS = 0;
-            break;
-        case 8:
-            DIO4_TRIS = 0;
-            break;
-    }
     DIO1 = value & 0b1;
     DIO2 = (value & 0b10) >> 1;
     DIO3 = (value & 0b100) >> 2;
@@ -29,7 +15,44 @@ uint8_t DIO_Read(void) {
     temp |= DIO2 << 1;
     temp |= DIO3 << 2;
     temp |= DIO4 << 3;
+    return temp;
 
+}
+void DIO_SetIO(uint8_t value)
+{
+    
+    if(value & 0b00000001)
+    {
+        DIO1_TRIS = 1;
+    }
+    else
+    {
+        DIO1_TRIS = 0;
+    }
+    if(value & 0b00000010)
+    {
+        DIO2_TRIS = 1;
+    }
+    else
+    {
+        DIO2_TRIS = 0;
+    }
+    if(value & 0b00000100)
+    {
+        DIO3_TRIS = 1;
+    }
+    else
+    {
+        DIO3_TRIS = 0;
+    }
+    if(value & 0b00001000)
+    {
+        DIO4_TRIS = 1;
+    }
+    else
+    {
+        DIO4_TRIS = 0;
+    }
 }
 
 void DIO_Init(void) {

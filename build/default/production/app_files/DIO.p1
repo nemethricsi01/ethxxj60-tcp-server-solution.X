@@ -1,20 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"4343 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4343:     struct {
-[s S159 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S159 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
-"4351
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4351:     struct {
-[s S160 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S160 . RA0 RA1 RA2 RA3 RA4 RA5 ]
-"4342
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4342: typedef union {
-[u S158 `S159 1 `S160 1 ]
-[n S158 . . . ]
-"4360
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4360: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
-[v _TRISAbits `VS158 ~T0 @X0 0 e@3986 ]
-"2820
+"2820 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2820:     struct {
 [s S99 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S99 . RA0 RA1 RA2 RA3 RA4 RA5 ]
@@ -37,6 +22,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2848
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2848: extern volatile PORTAbits_t PORTAbits __attribute__((address(0xF80)));
 [v _PORTAbits `VS98 ~T0 @X0 0 e@3968 ]
+"4343
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4343:     struct {
+[s S159 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S159 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
+"4351
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4351:     struct {
+[s S160 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S160 . RA0 RA1 RA2 RA3 RA4 RA5 ]
+"4342
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4342: typedef union {
+[u S158 `S159 1 `S160 1 ]
+[n S158 . . . ]
+"4360
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4360: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
+[v _TRISAbits `VS158 ~T0 @X0 0 e@3986 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 55: __asm("MAADR5 equ 0E80h");
 [; <" MAADR5 equ 0E80h ;# ">
@@ -849,117 +849,191 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _value `uc ~T0 @X0 1 r1 ]
 [f ]
 "5
-[; ;app_files/DIO.c: 5:     switch (value) {
-[e $U 440  ]
-{
-"6
-[; ;app_files/DIO.c: 6:         case 1:
-[e :U 441 ]
-"7
-[; ;app_files/DIO.c: 7:             break;
-[e $U 439  ]
-"8
-[; ;app_files/DIO.c: 8:             TRISAbits.RA2 = 0;
-[e = . . _TRISAbits 1 2 -> -> 0 `i `uc ]
-"9
-[; ;app_files/DIO.c: 9:         case 2:
-[e :U 442 ]
-"10
-[; ;app_files/DIO.c: 10:             TRISAbits.RA3 = 0;
-[e = . . _TRISAbits 1 3 -> -> 0 `i `uc ]
-"11
-[; ;app_files/DIO.c: 11:             break;
-[e $U 439  ]
-"12
-[; ;app_files/DIO.c: 12:         case 4:
-[e :U 443 ]
-"13
-[; ;app_files/DIO.c: 13:             TRISAbits.RA4 = 0;
-[e = . . _TRISAbits 1 4 -> -> 0 `i `uc ]
-"14
-[; ;app_files/DIO.c: 14:             break;
-[e $U 439  ]
-"15
-[; ;app_files/DIO.c: 15:         case 8:
-[e :U 444 ]
-"16
-[; ;app_files/DIO.c: 16:             TRISAbits.RA5 = 0;
-[e = . . _TRISAbits 1 5 -> -> 0 `i `uc ]
-"17
-[; ;app_files/DIO.c: 17:             break;
-[e $U 439  ]
-"18
-[; ;app_files/DIO.c: 18:     }
-}
-[e $U 439  ]
-[e :U 440 ]
-[e [\ -> _value `i , $ -> 1 `i 441
- , $ -> 2 `i 442
- , $ -> 4 `i 443
- , $ -> 8 `i 444
- 439 ]
-[e :U 439 ]
-"19
-[; ;app_files/DIO.c: 19:     PORTAbits.RA2 = value & 0b1;
+[; ;app_files/DIO.c: 5:     PORTAbits.RA2 = value & 0b1;
 [e = . . _PORTAbits 0 2 -> & -> _value `i -> 1 `i `uc ]
-"20
-[; ;app_files/DIO.c: 20:     PORTAbits.RA3 = (value & 0b10) >> 1;
+"6
+[; ;app_files/DIO.c: 6:     PORTAbits.RA3 = (value & 0b10) >> 1;
 [e = . . _PORTAbits 0 3 -> >> & -> _value `i -> 2 `i -> 1 `i `uc ]
-"21
-[; ;app_files/DIO.c: 21:     PORTAbits.RA4 = (value & 0b100) >> 2;
+"7
+[; ;app_files/DIO.c: 7:     PORTAbits.RA4 = (value & 0b100) >> 2;
 [e = . . _PORTAbits 0 4 -> >> & -> _value `i -> 4 `i -> 2 `i `uc ]
-"22
-[; ;app_files/DIO.c: 22:     PORTAbits.RA5 = (value & 0b1000) >> 3;
+"8
+[; ;app_files/DIO.c: 8:     PORTAbits.RA5 = (value & 0b1000) >> 3;
 [e = . . _PORTAbits 0 5 -> >> & -> _value `i -> 8 `i -> 3 `i `uc ]
-"24
-[; ;app_files/DIO.c: 24: }
+"10
+[; ;app_files/DIO.c: 10: }
 [e :UE 438 ]
 }
-"26
-[; ;app_files/DIO.c: 26: uint8_t DIO_Read(void) {
+"12
+[; ;app_files/DIO.c: 12: uint8_t DIO_Read(void) {
 [v _DIO_Read `(uc ~T0 @X0 1 ef ]
 {
 [e :U _DIO_Read ]
 [f ]
-"27
-[; ;app_files/DIO.c: 27:     uint8_t temp = 0;
+"13
+[; ;app_files/DIO.c: 13:     uint8_t temp = 0;
 [v _temp `uc ~T0 @X0 1 a ]
 [e = _temp -> -> 0 `i `uc ]
-"28
-[; ;app_files/DIO.c: 28:     temp = PORTAbits.RA2;
+"14
+[; ;app_files/DIO.c: 14:     temp = PORTAbits.RA2;
 [e = _temp . . _PORTAbits 0 2 ]
-"29
-[; ;app_files/DIO.c: 29:     temp |= PORTAbits.RA3 << 1;
+"15
+[; ;app_files/DIO.c: 15:     temp |= PORTAbits.RA3 << 1;
 [e =| _temp -> << -> . . _PORTAbits 0 3 `i -> 1 `i `uc ]
-"30
-[; ;app_files/DIO.c: 30:     temp |= PORTAbits.RA4 << 2;
+"16
+[; ;app_files/DIO.c: 16:     temp |= PORTAbits.RA4 << 2;
 [e =| _temp -> << -> . . _PORTAbits 0 4 `i -> 2 `i `uc ]
-"31
-[; ;app_files/DIO.c: 31:     temp |= PORTAbits.RA5 << 3;
+"17
+[; ;app_files/DIO.c: 17:     temp |= PORTAbits.RA5 << 3;
 [e =| _temp -> << -> . . _PORTAbits 0 5 `i -> 3 `i `uc ]
-"33
-[; ;app_files/DIO.c: 33: }
-[e :UE 445 ]
+"18
+[; ;app_files/DIO.c: 18:     return temp;
+[e ) _temp ]
+[e $UE 439  ]
+"20
+[; ;app_files/DIO.c: 20: }
+[e :UE 439 ]
 }
+"21
+[; ;app_files/DIO.c: 21: void DIO_SetIO(uint8_t value)
+[v _DIO_SetIO `(v ~T0 @X0 1 ef1`uc ]
+"22
+[; ;app_files/DIO.c: 22: {
+{
+[e :U _DIO_SetIO ]
+"21
+[; ;app_files/DIO.c: 21: void DIO_SetIO(uint8_t value)
+[v _value `uc ~T0 @X0 1 r1 ]
+"22
+[; ;app_files/DIO.c: 22: {
+[f ]
+"24
+[; ;app_files/DIO.c: 24:     if(value & 0b00000001)
+[e $ ! != & -> _value `i -> 1 `i -> 0 `i 441  ]
+"25
+[; ;app_files/DIO.c: 25:     {
+{
+"26
+[; ;app_files/DIO.c: 26:         TRISAbits.RA2 = 1;
+[e = . . _TRISAbits 1 2 -> -> 1 `i `uc ]
+"27
+[; ;app_files/DIO.c: 27:     }
+}
+[e $U 442  ]
+"28
+[; ;app_files/DIO.c: 28:     else
+[e :U 441 ]
+"29
+[; ;app_files/DIO.c: 29:     {
+{
+"30
+[; ;app_files/DIO.c: 30:         TRISAbits.RA2 = 0;
+[e = . . _TRISAbits 1 2 -> -> 0 `i `uc ]
+"31
+[; ;app_files/DIO.c: 31:     }
+}
+[e :U 442 ]
+"32
+[; ;app_files/DIO.c: 32:     if(value & 0b00000010)
+[e $ ! != & -> _value `i -> 2 `i -> 0 `i 443  ]
+"33
+[; ;app_files/DIO.c: 33:     {
+{
+"34
+[; ;app_files/DIO.c: 34:         TRISAbits.RA3 = 1;
+[e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
 "35
-[; ;app_files/DIO.c: 35: void DIO_Init(void) {
+[; ;app_files/DIO.c: 35:     }
+}
+[e $U 444  ]
+"36
+[; ;app_files/DIO.c: 36:     else
+[e :U 443 ]
+"37
+[; ;app_files/DIO.c: 37:     {
+{
+"38
+[; ;app_files/DIO.c: 38:         TRISAbits.RA3 = 0;
+[e = . . _TRISAbits 1 3 -> -> 0 `i `uc ]
+"39
+[; ;app_files/DIO.c: 39:     }
+}
+[e :U 444 ]
+"40
+[; ;app_files/DIO.c: 40:     if(value & 0b00000100)
+[e $ ! != & -> _value `i -> 4 `i -> 0 `i 445  ]
+"41
+[; ;app_files/DIO.c: 41:     {
+{
+"42
+[; ;app_files/DIO.c: 42:         TRISAbits.RA4 = 1;
+[e = . . _TRISAbits 1 4 -> -> 1 `i `uc ]
+"43
+[; ;app_files/DIO.c: 43:     }
+}
+[e $U 446  ]
+"44
+[; ;app_files/DIO.c: 44:     else
+[e :U 445 ]
+"45
+[; ;app_files/DIO.c: 45:     {
+{
+"46
+[; ;app_files/DIO.c: 46:         TRISAbits.RA4 = 0;
+[e = . . _TRISAbits 1 4 -> -> 0 `i `uc ]
+"47
+[; ;app_files/DIO.c: 47:     }
+}
+[e :U 446 ]
+"48
+[; ;app_files/DIO.c: 48:     if(value & 0b00001000)
+[e $ ! != & -> _value `i -> 8 `i -> 0 `i 447  ]
+"49
+[; ;app_files/DIO.c: 49:     {
+{
+"50
+[; ;app_files/DIO.c: 50:         TRISAbits.RA5 = 1;
+[e = . . _TRISAbits 1 5 -> -> 1 `i `uc ]
+"51
+[; ;app_files/DIO.c: 51:     }
+}
+[e $U 448  ]
+"52
+[; ;app_files/DIO.c: 52:     else
+[e :U 447 ]
+"53
+[; ;app_files/DIO.c: 53:     {
+{
+"54
+[; ;app_files/DIO.c: 54:         TRISAbits.RA5 = 0;
+[e = . . _TRISAbits 1 5 -> -> 0 `i `uc ]
+"55
+[; ;app_files/DIO.c: 55:     }
+}
+[e :U 448 ]
+"56
+[; ;app_files/DIO.c: 56: }
+[e :UE 440 ]
+}
+"58
+[; ;app_files/DIO.c: 58: void DIO_Init(void) {
 [v _DIO_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _DIO_Init ]
 [f ]
-"36
-[; ;app_files/DIO.c: 36:     TRISAbits.RA2 = 1;
+"59
+[; ;app_files/DIO.c: 59:     TRISAbits.RA2 = 1;
 [e = . . _TRISAbits 1 2 -> -> 1 `i `uc ]
-"37
-[; ;app_files/DIO.c: 37:     TRISAbits.RA3 = 1;
+"60
+[; ;app_files/DIO.c: 60:     TRISAbits.RA3 = 1;
 [e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
-"38
-[; ;app_files/DIO.c: 38:     TRISAbits.RA4 = 1;
+"61
+[; ;app_files/DIO.c: 61:     TRISAbits.RA4 = 1;
 [e = . . _TRISAbits 1 4 -> -> 1 `i `uc ]
-"39
-[; ;app_files/DIO.c: 39:     TRISAbits.RA5 = 1;
+"62
+[; ;app_files/DIO.c: 62:     TRISAbits.RA5 = 1;
 [e = . . _TRISAbits 1 5 -> -> 1 `i `uc ]
-"40
-[; ;app_files/DIO.c: 40: }
-[e :UE 446 ]
+"63
+[; ;app_files/DIO.c: 63: }
+[e :UE 449 ]
 }

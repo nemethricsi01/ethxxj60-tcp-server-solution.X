@@ -105,6 +105,8 @@ void main(void)
     TRISCbits.RC5 = 0;//sdo
     TRISCbits.RC4 = 1;//sdi
     TRISFbits.RF7 = 0;//CS
+    
+    ADCON1bits.PCFG = 0b1111;//all analog DIO ports need to be set to digital in order to be able to read the digitally
     //setup for uart
     TXSTA1bits.TXEN = 1;
     RCSTA1bits.SPEN = 1;

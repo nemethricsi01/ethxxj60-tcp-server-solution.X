@@ -11,8 +11,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;app_files/../mcc_generated_files/TCPIPLibrary/tcpip_types.h: 399: {
 [s S453 `us 1 `S451 1 ]
 [n S453 . port addr ]
-"37 app_files/tcp_server_demo.c
-[; ;app_files/tcp_server_demo.c: 37:     static tcpTCB_t port7TCB;
+"38 app_files/tcp_server_demo.c
+[; ;app_files/tcp_server_demo.c: 38:     static tcpTCB_t port7TCB;
 [c E4816 0 1 2 .. ]
 [n E4816 . NO_BUFF RX_BUFF_IN_USE TX_BUFF_IN_USE  ]
 [c E4774 0 1 2 3 4 5 6 7 8 9 10 .. ]
@@ -28,8 +28,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "258
 [; ;app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h: 258: socketState_t TCP_SocketPoll(tcpTCB_t *tcbPtr);
 [v _TCP_SocketPoll `(E4803 ~T0 @X0 0 ef1`*S463 ]
-"60 app_files/tcp_server_demo.c
-[; ;app_files/tcp_server_demo.c: 60:             TCP_SocketInit(&port7TCB);
+"61 app_files/tcp_server_demo.c
+[; ;app_files/tcp_server_demo.c: 61:             TCP_SocketInit(&port7TCB);
 [c E4089 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 .. ]
 [n E4089 . ERROR SUCCESS LINK_NOT_FOUND BUFFER_BUSY TX_LOGIC_NOT_IDLE MAC_NOT_FOUND IP_WRONG_VERSION IPV4_CHECKSUM_FAILS DEST_IP_NOT_MATCHED ICMP_CHECKSUM_FAILS UDP_CHECKSUM_FAILS TCP_CHECKSUM_FAILS DMA_TIMEOUT PORT_NOT_AVAILABLE ARP_IP_NOT_MATCHED EAPoL_PACKET_FAILURE INCORRECT_IPV4_HLEN IPV4_NO_OPTIONS TX_QUEUED IPV6_CHECKSUM_FAILS IPV6_LOCAL_ADDR_RESOLVE IPV6_LOCAL_ADDR_INVALID NO_GATEWAY ADDRESS_RESOLUTION GLOBAL_DESTINATION ARP_WRONG_HARDWARE_ADDR_TYPE ARP_WRONG_PROTOCOL_TYPE ARP_WRONG_HARDWARE_ADDR_LEN ARP_WRONG_PROTOCOL_LEN  ]
 "229 app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h
@@ -53,8 +53,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "386
 [; ;app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h: 386: int16_t TCP_GetReceivedData(tcpTCB_t *tcbPtr);
 [v _TCP_GetReceivedData `(s ~T0 @X0 0 ef1`*S463 ]
-"29 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+"48 app_files/DIO.h
+[; ;app_files/DIO.h: 48: void DIO_Write(uint8_t value);
+[v _DIO_Write `(v ~T0 @X0 0 ef1`uc ]
+"49
+[; ;app_files/DIO.h: 49: uint8_t DIO_Read(void);
+[v _DIO_Read `(uc ~T0 @X0 0 ef ]
+"51
+[; ;app_files/DIO.h: 51: void DIO_SetIO(uint8_t value);
+[v _DIO_SetIO `(v ~T0 @X0 0 ef1`uc ]
+"29 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "338 app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h
 [; ;app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h: 338: error_msg TCP_Send(tcpTCB_t *tcbPtr, uint8_t *data, uint16_t dataLen);
@@ -866,218 +875,243 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33 app_files/tcp_server_demo.h
 [; ;app_files/tcp_server_demo.h: 33: sockaddr_in4_t remoteSocket;
 [v _remoteSocket `S453 ~T0 @X0 1 e ]
-"35 app_files/tcp_server_demo.c
-[; ;app_files/tcp_server_demo.c: 35: void TCP_Demo_EchoServer(void) {
+"36 app_files/tcp_server_demo.c
+[; ;app_files/tcp_server_demo.c: 36: void TCP_Demo_EchoServer(void) {
 [v _TCP_Demo_EchoServer `(v ~T0 @X0 1 ef ]
 {
 [e :U _TCP_Demo_EchoServer ]
 [f ]
-"37
-[; ;app_files/tcp_server_demo.c: 37:     static tcpTCB_t port7TCB;
-[v F4889 `S463 ~T0 @X0 1 s port7TCB ]
-"42
-[; ;app_files/tcp_server_demo.c: 42:     static uint8_t rxdataPort7[20];
-[v F4890 `uc ~T0 @X0 -> 20 `i s rxdataPort7 ]
+"38
+[; ;app_files/tcp_server_demo.c: 38:     static tcpTCB_t port7TCB;
+[v F4895 `S463 ~T0 @X0 1 s port7TCB ]
 "43
-[; ;app_files/tcp_server_demo.c: 43:     static uint8_t txdataPort7[20];
-[v F4891 `uc ~T0 @X0 -> 20 `i s txdataPort7 ]
-"46
-[; ;app_files/tcp_server_demo.c: 46:     uint16_t rxLen, txLen, i;
+[; ;app_files/tcp_server_demo.c: 43:     static uint8_t rxdataPort7[20];
+[v F4896 `uc ~T0 @X0 -> 20 `i s rxdataPort7 ]
+"44
+[; ;app_files/tcp_server_demo.c: 44:     static uint8_t txdataPort7[20];
+[v F4897 `uc ~T0 @X0 -> 20 `i s txdataPort7 ]
+"47
+[; ;app_files/tcp_server_demo.c: 47:     uint16_t rxLen, txLen, i;
 [v _rxLen `us ~T0 @X0 1 a ]
 [v _txLen `us ~T0 @X0 1 a ]
 [v _i `us ~T0 @X0 1 a ]
-"47
-[; ;app_files/tcp_server_demo.c: 47:     socketState_t socket_state;
-[v _socket_state `E4803 ~T0 @X0 1 a ]
 "48
-[; ;app_files/tcp_server_demo.c: 48:     uint8_t datalen = 0;
+[; ;app_files/tcp_server_demo.c: 48:     socketState_t socket_state;
+[v _socket_state `E4803 ~T0 @X0 1 a ]
+"49
+[; ;app_files/tcp_server_demo.c: 49:     uint8_t datalen = 0;
 [v _datalen `uc ~T0 @X0 1 a ]
 [e = _datalen -> -> 0 `i `uc ]
-"51
-[; ;app_files/tcp_server_demo.c: 51:     socket_state = TCP_SocketPoll(&port7TCB);
-[e = _socket_state ( _TCP_SocketPoll (1 &U F4889 ]
-"56
-[; ;app_files/tcp_server_demo.c: 56:     switch (socket_state) {
+"52
+[; ;app_files/tcp_server_demo.c: 52:     socket_state = TCP_SocketPoll(&port7TCB);
+[e = _socket_state ( _TCP_SocketPoll (1 &U F4895 ]
+"57
+[; ;app_files/tcp_server_demo.c: 57:     switch (socket_state) {
 [e $U 466  ]
 {
-"57
-[; ;app_files/tcp_server_demo.c: 57:         case NOT_A_SOCKET:
+"58
+[; ;app_files/tcp_server_demo.c: 58:         case NOT_A_SOCKET:
 [e :U 467 ]
-"60
-[; ;app_files/tcp_server_demo.c: 60:             TCP_SocketInit(&port7TCB);
-[e ( _TCP_SocketInit (1 &U F4889 ]
 "61
-[; ;app_files/tcp_server_demo.c: 61:             break;
-[e $U 465  ]
+[; ;app_files/tcp_server_demo.c: 61:             TCP_SocketInit(&port7TCB);
+[e ( _TCP_SocketInit (1 &U F4895 ]
 "62
-[; ;app_files/tcp_server_demo.c: 62:         case SOCKET_CLOSED:
-[e :U 468 ]
-"65
-[; ;app_files/tcp_server_demo.c: 65:             TCP_Bind(&port7TCB, 7);
-[e ( _TCP_Bind (2 , &U F4889 -> -> 7 `i `us ]
-"69
-[; ;app_files/tcp_server_demo.c: 69:             TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
-[e ( _TCP_InsertRxBuffer (3 , , &U F4889 &U F4890 -> -> # F4890 `ui `us ]
-"72
-[; ;app_files/tcp_server_demo.c: 72:             TCP_Listen(&port7TCB);
-[e ( _TCP_Listen (1 &U F4889 ]
-"75
-[; ;app_files/tcp_server_demo.c: 75:             break;
+[; ;app_files/tcp_server_demo.c: 62:             break;
 [e $U 465  ]
+"63
+[; ;app_files/tcp_server_demo.c: 63:         case SOCKET_CLOSED:
+[e :U 468 ]
+"66
+[; ;app_files/tcp_server_demo.c: 66:             TCP_Bind(&port7TCB, 7);
+[e ( _TCP_Bind (2 , &U F4895 -> -> 7 `i `us ]
+"70
+[; ;app_files/tcp_server_demo.c: 70:             TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
+[e ( _TCP_InsertRxBuffer (3 , , &U F4895 &U F4896 -> -> # F4896 `ui `us ]
+"73
+[; ;app_files/tcp_server_demo.c: 73:             TCP_Listen(&port7TCB);
+[e ( _TCP_Listen (1 &U F4895 ]
 "76
-[; ;app_files/tcp_server_demo.c: 76:         case SOCKET_CONNECTED:
+[; ;app_files/tcp_server_demo.c: 76:             break;
+[e $U 465  ]
+"77
+[; ;app_files/tcp_server_demo.c: 77:         case SOCKET_CONNECTED:
 [e :U 469 ]
-"78
-[; ;app_files/tcp_server_demo.c: 78:             if (TCP_SendDone(&port7TCB)) {
-[e $ ! != -> ( _TCP_SendDone (1 &U F4889 `ui -> -> 0 `i `ui 470  ]
+"79
+[; ;app_files/tcp_server_demo.c: 79:             if (TCP_SendDone(&port7TCB)) {
+[e $ ! != -> ( _TCP_SendDone (1 &U F4895 `ui -> -> 0 `i `ui 470  ]
 {
-"80
-[; ;app_files/tcp_server_demo.c: 80:                 rxLen = TCP_GetRxLength(&port7TCB);
-[e = _rxLen -> ( _TCP_GetRxLength (1 &U F4889 `us ]
 "81
-[; ;app_files/tcp_server_demo.c: 81:                 if (rxLen > 0) {
+[; ;app_files/tcp_server_demo.c: 81:                 rxLen = TCP_GetRxLength(&port7TCB);
+[e = _rxLen -> ( _TCP_GetRxLength (1 &U F4895 `us ]
+"82
+[; ;app_files/tcp_server_demo.c: 82:                 if (rxLen > 0) {
 [e $ ! > -> _rxLen `ui -> -> 0 `i `ui 471  ]
 {
-"82
-[; ;app_files/tcp_server_demo.c: 82:                     rxLen = TCP_GetReceivedData(&port7TCB);
-[e = _rxLen -> ( _TCP_GetReceivedData (1 &U F4889 `us ]
-"85
-[; ;app_files/tcp_server_demo.c: 85:                     switch (rxdataPort7[0]) {
+"83
+[; ;app_files/tcp_server_demo.c: 83:                     rxLen = TCP_GetReceivedData(&port7TCB);
+[e = _rxLen -> ( _TCP_GetReceivedData (1 &U F4895 `us ]
+"86
+[; ;app_files/tcp_server_demo.c: 86:                     switch (rxdataPort7[0]) {
 [e $U 473  ]
 {
-"86
-[; ;app_files/tcp_server_demo.c: 86:                         case 0x18:
-[e :U 474 ]
 "87
-[; ;app_files/tcp_server_demo.c: 87:                             if (rxdataPort7[1] == 0x18)
-[e $ ! == -> *U + &U F4890 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4890 `ui `ux `i -> 24 `i 475  ]
+[; ;app_files/tcp_server_demo.c: 87:                         case 0x18:
+[e :U 474 ]
 "88
-[; ;app_files/tcp_server_demo.c: 88:                             {
-{
+[; ;app_files/tcp_server_demo.c: 88:                             if (rxdataPort7[1] == 0x18)
+[e $ ! == -> *U + &U F4896 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4896 `ui `ux `i -> 24 `i 475  ]
 "89
-[; ;app_files/tcp_server_demo.c: 89:                                 txdataPort7[0] = 0x18;
-[e = *U + &U F4891 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 24 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 89:                             {
+{
 "90
-[; ;app_files/tcp_server_demo.c: 90:                                 txdataPort7[1] = 0x18;
-[e = *U + &U F4891 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 24 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 90:                                 txdataPort7[0] = 0x18;
+[e = *U + &U F4897 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 24 `i `uc ]
 "91
-[; ;app_files/tcp_server_demo.c: 91:                                 txdataPort7[2] = 0x63;
-[e = *U + &U F4891 * -> -> -> 2 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 99 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 91:                                 txdataPort7[1] = 0x18;
+[e = *U + &U F4897 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 24 `i `uc ]
 "92
-[; ;app_files/tcp_server_demo.c: 92:                                 txdataPort7[3] = 0x05;
-[e = *U + &U F4891 * -> -> -> 3 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 5 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 92:                                 txdataPort7[2] = 0x63;
+[e = *U + &U F4897 * -> -> -> 2 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 99 `i `uc ]
 "93
-[; ;app_files/tcp_server_demo.c: 93:                                 datalen = 4;
-[e = _datalen -> -> 4 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 93:                                 txdataPort7[3] = 0x05;
+[e = *U + &U F4897 * -> -> -> 3 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 5 `i `uc ]
 "94
-[; ;app_files/tcp_server_demo.c: 94:                             }
+[; ;app_files/tcp_server_demo.c: 94:                                 datalen = 4;
+[e = _datalen -> -> 4 `i `uc ]
+"95
+[; ;app_files/tcp_server_demo.c: 95:                             }
 }
 [e :U 475 ]
-"96
-[; ;app_files/tcp_server_demo.c: 96:                             break;
-[e $U 472  ]
 "97
-[; ;app_files/tcp_server_demo.c: 97:                         case 0x5A:
-[e :U 476 ]
+[; ;app_files/tcp_server_demo.c: 97:                             break;
+[e $U 472  ]
 "98
-[; ;app_files/tcp_server_demo.c: 98:                             if (rxdataPort7[1] == 0x18)
-[e $ ! == -> *U + &U F4890 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4890 `ui `ux `i -> 24 `i 477  ]
+[; ;app_files/tcp_server_demo.c: 98:                         case 0x5A:
+[e :U 476 ]
 "99
-[; ;app_files/tcp_server_demo.c: 99:                             {
-{
+[; ;app_files/tcp_server_demo.c: 99:                             if (rxdataPort7[1] == 0x18)
+[e $ ! == -> *U + &U F4896 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4896 `ui `ux `i -> 24 `i 477  ]
 "100
-[; ;app_files/tcp_server_demo.c: 100:                                 txdataPort7[0] = 0x5A;
-[e = *U + &U F4891 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 90 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 100:                             {
+{
 "101
-[; ;app_files/tcp_server_demo.c: 101:                                 txdataPort7[1] = 0x18;
-[e = *U + &U F4891 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 24 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 101:                                 txdataPort7[0] = 0x5A;
+[e = *U + &U F4897 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 90 `i `uc ]
 "102
-[; ;app_files/tcp_server_demo.c: 102:                                 datalen = 2;
-[e = _datalen -> -> 2 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 102:                                 txdataPort7[1] = 0x18;
+[e = *U + &U F4897 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 24 `i `uc ]
 "103
-[; ;app_files/tcp_server_demo.c: 103:                             }
+[; ;app_files/tcp_server_demo.c: 103:                                 DIO_Write(rxdataPort7[2]);
+[e ( _DIO_Write (1 *U + &U F4896 * -> -> -> 2 `i `ui `ux -> -> # *U &U F4896 `ui `ux ]
+"104
+[; ;app_files/tcp_server_demo.c: 104:                                 datalen = 2;
+[e = _datalen -> -> 2 `i `uc ]
+"105
+[; ;app_files/tcp_server_demo.c: 105:                             }
 }
 [e :U 477 ]
-"104
-[; ;app_files/tcp_server_demo.c: 104:                             if (rxdataPort7[1] == 0x24)
-[e $ ! == -> *U + &U F4890 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4890 `ui `ux `i -> 36 `i 478  ]
-"105
-[; ;app_files/tcp_server_demo.c: 105:                             {
-{
 "106
-[; ;app_files/tcp_server_demo.c: 106:                                 txdataPort7[0] = 0x5A;
-[e = *U + &U F4891 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 90 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 106:                             if (rxdataPort7[1] == 0x24)
+[e $ ! == -> *U + &U F4896 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4896 `ui `ux `i -> 36 `i 478  ]
 "107
-[; ;app_files/tcp_server_demo.c: 107:                                 txdataPort7[1] = 0x24;
-[e = *U + &U F4891 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 36 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 107:                             {
+{
 "108
-[; ;app_files/tcp_server_demo.c: 108:                                 txdataPort7[2] = 0x55;
-[e = *U + &U F4891 * -> -> -> 2 `i `ui `ux -> -> # *U &U F4891 `ui `ux -> -> 85 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 108:                                 txdataPort7[0] = 0x5A;
+[e = *U + &U F4897 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 90 `i `uc ]
 "109
-[; ;app_files/tcp_server_demo.c: 109:                                 datalen = 3;
-[e = _datalen -> -> 3 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 109:                                 txdataPort7[1] = 0x24;
+[e = *U + &U F4897 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 36 `i `uc ]
 "110
-[; ;app_files/tcp_server_demo.c: 110:                             }
+[; ;app_files/tcp_server_demo.c: 110:                                 txdataPort7[2] = DIO_Read();
+[e = *U + &U F4897 * -> -> -> 2 `i `ui `ux -> -> # *U &U F4897 `ui `ux ( _DIO_Read ..  ]
+"111
+[; ;app_files/tcp_server_demo.c: 111:                                 datalen = 3;
+[e = _datalen -> -> 3 `i `uc ]
+"112
+[; ;app_files/tcp_server_demo.c: 112:                             }
 }
 [e :U 478 ]
-"111
-[; ;app_files/tcp_server_demo.c: 111:                             break;
-[e $U 472  ]
-"112
-[; ;app_files/tcp_server_demo.c: 112:                         default:
-[e :U 479 ]
 "113
-[; ;app_files/tcp_server_demo.c: 113:                             memset(txdataPort7, 0, sizeof (txdataPort7));
-[e ( _memset (3 , , -> &U F4891 `*v -> 0 `i -> # F4891 `ui ]
+[; ;app_files/tcp_server_demo.c: 113:                             if (rxdataPort7[1] == 0x30)
+[e $ ! == -> *U + &U F4896 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4896 `ui `ux `i -> 48 `i 479  ]
 "114
-[; ;app_files/tcp_server_demo.c: 114:                             datalen = 4;
-[e = _datalen -> -> 4 `i `uc ]
+[; ;app_files/tcp_server_demo.c: 114:                             {
+{
 "115
-[; ;app_files/tcp_server_demo.c: 115:                             break;
-[e $U 472  ]
+[; ;app_files/tcp_server_demo.c: 115:                                 txdataPort7[0] = 0x5A;
+[e = *U + &U F4897 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 90 `i `uc ]
 "116
-[; ;app_files/tcp_server_demo.c: 116:                     }
+[; ;app_files/tcp_server_demo.c: 116:                                 txdataPort7[1] = 0x24;
+[e = *U + &U F4897 * -> -> -> 1 `i `ui `ux -> -> # *U &U F4897 `ui `ux -> -> 36 `i `uc ]
+"117
+[; ;app_files/tcp_server_demo.c: 117:                                 DIO_SetIO(rxdataPort7[2]);
+[e ( _DIO_SetIO (1 *U + &U F4896 * -> -> -> 2 `i `ui `ux -> -> # *U &U F4896 `ui `ux ]
+"118
+[; ;app_files/tcp_server_demo.c: 118:                                 datalen = 3;
+[e = _datalen -> -> 3 `i `uc ]
+"119
+[; ;app_files/tcp_server_demo.c: 119:                             }
+}
+[e :U 479 ]
+"120
+[; ;app_files/tcp_server_demo.c: 120:                             break;
+[e $U 472  ]
+"121
+[; ;app_files/tcp_server_demo.c: 121:                         default:
+[e :U 480 ]
+"122
+[; ;app_files/tcp_server_demo.c: 122:                             memset(txdataPort7, 0, sizeof (txdataPort7));
+[e ( _memset (3 , , -> &U F4897 `*v -> 0 `i -> # F4897 `ui ]
+"123
+[; ;app_files/tcp_server_demo.c: 123:                             datalen = 4;
+[e = _datalen -> -> 4 `i `uc ]
+"124
+[; ;app_files/tcp_server_demo.c: 124:                             break;
+[e $U 472  ]
+"125
+[; ;app_files/tcp_server_demo.c: 125:                     }
 }
 [e $U 472  ]
 [e :U 473 ]
-[e [\ -> *U + &U F4890 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4890 `ui `ux `i , $ -> 24 `i 474
+[e [\ -> *U + &U F4896 * -> -> -> 0 `i `ui `ux -> -> # *U &U F4896 `ui `ux `i , $ -> 24 `i 474
  , $ -> 90 `i 476
- 479 ]
+ 480 ]
 [e :U 472 ]
-"117
-[; ;app_files/tcp_server_demo.c: 117:                     TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
-[e ( _TCP_InsertRxBuffer (3 , , &U F4889 &U F4890 -> -> # F4890 `ui `us ]
-"119
-[; ;app_files/tcp_server_demo.c: 119:                     TCP_Send(&port7TCB, txdataPort7, datalen);
-[e ( _TCP_Send (3 , , &U F4889 &U F4891 -> _datalen `us ]
-"121
-[; ;app_files/tcp_server_demo.c: 121:                 }
+"126
+[; ;app_files/tcp_server_demo.c: 126:                     TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
+[e ( _TCP_InsertRxBuffer (3 , , &U F4895 &U F4896 -> -> # F4896 `ui `us ]
+"128
+[; ;app_files/tcp_server_demo.c: 128:                     TCP_Send(&port7TCB, txdataPort7, datalen);
+[e ( _TCP_Send (3 , , &U F4895 &U F4897 -> _datalen `us ]
+"130
+[; ;app_files/tcp_server_demo.c: 130:                 }
 }
 [e :U 471 ]
-"122
-[; ;app_files/tcp_server_demo.c: 122:             }
+"131
+[; ;app_files/tcp_server_demo.c: 131:             }
 }
 [e :U 470 ]
-"123
-[; ;app_files/tcp_server_demo.c: 123:             break;
+"132
+[; ;app_files/tcp_server_demo.c: 132:             break;
 [e $U 465  ]
-"124
-[; ;app_files/tcp_server_demo.c: 124:         default:
-[e :U 480 ]
-"126
-[; ;app_files/tcp_server_demo.c: 126:             break;
+"133
+[; ;app_files/tcp_server_demo.c: 133:         default:
+[e :U 481 ]
+"135
+[; ;app_files/tcp_server_demo.c: 135:             break;
 [e $U 465  ]
-"127
-[; ;app_files/tcp_server_demo.c: 127:     }
+"136
+[; ;app_files/tcp_server_demo.c: 136:     }
 }
 [e $U 465  ]
 [e :U 466 ]
 [e [\ -> _socket_state `ui , $ -> . `E4803 0 `ui 467
  , $ -> . `E4803 1 `ui 468
  , $ -> . `E4803 3 `ui 469
- 480 ]
+ 481 ]
 [e :U 465 ]
-"128
-[; ;app_files/tcp_server_demo.c: 128: }
+"137
+[; ;app_files/tcp_server_demo.c: 137: }
 [e :UE 464 ]
 }

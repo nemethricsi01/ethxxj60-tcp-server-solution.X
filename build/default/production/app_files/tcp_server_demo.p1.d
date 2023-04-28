@@ -8,4 +8,5 @@ app_files/../mcc_generated_files/tmr1.h  \
 app_files/../mcc_generated_files/TCPIPLibrary/network.h  \
 app_files/../mcc_generated_files/TCPIPLibrary/tcpip_types.h  \
 app_files/tcp_server_demo.h  \
-app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h 
+app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h  \
+app_files/DIO.h 

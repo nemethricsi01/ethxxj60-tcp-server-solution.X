@@ -44,10 +44,11 @@
 #define DIO3_TRIS   TRISAbits.RA4
 #define DIO4_TRIS   TRISAbits.RA5
 
+
 void DIO_Write(uint8_t value);
 uint8_t DIO_Read(void);
 void DIO_Init(void);
-
+void DIO_SetIO(uint8_t value);
 
 
 #endif	/* XC_HEADER_TEMPLATE_H */
