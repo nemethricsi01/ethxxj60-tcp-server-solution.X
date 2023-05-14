@@ -37,6 +37,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4360
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4360: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
 [v _TRISAbits `VS158 ~T0 @X0 0 e@3986 ]
+"43 app_files/i2c_eeprom.h
+[; ;app_files/i2c_eeprom.h: 43: uint8_t i2c_eeprom_read(uint8_t devaddr, uint8_t memaddr,uint8_t *data);
+[v _i2c_eeprom_read `(uc ~T0 @X0 0 ef3`uc`uc`*uc ]
+"42
+[; ;app_files/i2c_eeprom.h: 42: uint8_t i2c_eeprom_write(uint8_t devaddr, uint8_t memaddr,uint8_t data);
+[v _i2c_eeprom_write `(uc ~T0 @X0 0 ef3`uc`uc`uc ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 55: __asm("MAADR5 equ 0E80h");
 [; <" MAADR5 equ 0E80h ;# ">
@@ -841,199 +847,225 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11125
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 11125: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"4 app_files/DIO.c
-[; ;app_files/DIO.c: 4: void DIO_Write(uint8_t value) {
+"7 app_files/DIO.c
+[; ;app_files/DIO.c: 7: void DIO_Write(uint8_t value) {
 [v _DIO_Write `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _DIO_Write ]
 [v _value `uc ~T0 @X0 1 r1 ]
 [f ]
-"5
-[; ;app_files/DIO.c: 5:     PORTAbits.RA2 = value & 0b1;
-[e = . . _PORTAbits 0 2 -> & -> _value `i -> 1 `i `uc ]
-"6
-[; ;app_files/DIO.c: 6:     PORTAbits.RA3 = (value & 0b10) >> 1;
-[e = . . _PORTAbits 0 3 -> >> & -> _value `i -> 2 `i -> 1 `i `uc ]
-"7
-[; ;app_files/DIO.c: 7:     PORTAbits.RA4 = (value & 0b100) >> 2;
-[e = . . _PORTAbits 0 4 -> >> & -> _value `i -> 4 `i -> 2 `i `uc ]
 "8
-[; ;app_files/DIO.c: 8:     PORTAbits.RA5 = (value & 0b1000) >> 3;
-[e = . . _PORTAbits 0 5 -> >> & -> _value `i -> 8 `i -> 3 `i `uc ]
+[; ;app_files/DIO.c: 8:     PORTAbits.RA2 = value & 0b1;
+[e = . . _PORTAbits 0 2 -> & -> _value `i -> 1 `i `uc ]
+"9
+[; ;app_files/DIO.c: 9:     PORTAbits.RA3 = (value & 0b10) >> 1;
+[e = . . _PORTAbits 0 3 -> >> & -> _value `i -> 2 `i -> 1 `i `uc ]
 "10
-[; ;app_files/DIO.c: 10: }
+[; ;app_files/DIO.c: 10:     PORTAbits.RA4 = (value & 0b100) >> 2;
+[e = . . _PORTAbits 0 4 -> >> & -> _value `i -> 4 `i -> 2 `i `uc ]
+"11
+[; ;app_files/DIO.c: 11:     PORTAbits.RA5 = (value & 0b1000) >> 3;
+[e = . . _PORTAbits 0 5 -> >> & -> _value `i -> 8 `i -> 3 `i `uc ]
+"13
+[; ;app_files/DIO.c: 13: }
 [e :UE 438 ]
 }
-"12
-[; ;app_files/DIO.c: 12: uint8_t DIO_Read(void) {
+"15
+[; ;app_files/DIO.c: 15: uint8_t DIO_Read(void) {
 [v _DIO_Read `(uc ~T0 @X0 1 ef ]
 {
 [e :U _DIO_Read ]
 [f ]
-"13
-[; ;app_files/DIO.c: 13:     uint8_t temp = 0;
+"16
+[; ;app_files/DIO.c: 16:     uint8_t temp = 0;
 [v _temp `uc ~T0 @X0 1 a ]
 [e = _temp -> -> 0 `i `uc ]
-"14
-[; ;app_files/DIO.c: 14:     temp = PORTAbits.RA2;
-[e = _temp . . _PORTAbits 0 2 ]
-"15
-[; ;app_files/DIO.c: 15:     temp |= PORTAbits.RA3 << 1;
-[e =| _temp -> << -> . . _PORTAbits 0 3 `i -> 1 `i `uc ]
-"16
-[; ;app_files/DIO.c: 16:     temp |= PORTAbits.RA4 << 2;
-[e =| _temp -> << -> . . _PORTAbits 0 4 `i -> 2 `i `uc ]
 "17
-[; ;app_files/DIO.c: 17:     temp |= PORTAbits.RA5 << 3;
-[e =| _temp -> << -> . . _PORTAbits 0 5 `i -> 3 `i `uc ]
+[; ;app_files/DIO.c: 17:     temp = PORTAbits.RA2;
+[e = _temp . . _PORTAbits 0 2 ]
 "18
-[; ;app_files/DIO.c: 18:     return temp;
+[; ;app_files/DIO.c: 18:     temp |= PORTAbits.RA3 << 1;
+[e =| _temp -> << -> . . _PORTAbits 0 3 `i -> 1 `i `uc ]
+"19
+[; ;app_files/DIO.c: 19:     temp |= PORTAbits.RA4 << 2;
+[e =| _temp -> << -> . . _PORTAbits 0 4 `i -> 2 `i `uc ]
+"20
+[; ;app_files/DIO.c: 20:     temp |= PORTAbits.RA5 << 3;
+[e =| _temp -> << -> . . _PORTAbits 0 5 `i -> 3 `i `uc ]
+"21
+[; ;app_files/DIO.c: 21:     return temp;
 [e ) _temp ]
 [e $UE 439  ]
-"20
-[; ;app_files/DIO.c: 20: }
+"23
+[; ;app_files/DIO.c: 23: }
 [e :UE 439 ]
 }
-"21
-[; ;app_files/DIO.c: 21: void DIO_SetIO(uint8_t value)
+"24
+[; ;app_files/DIO.c: 24: void DIO_SetIO(uint8_t value)
 [v _DIO_SetIO `(v ~T0 @X0 1 ef1`uc ]
-"22
-[; ;app_files/DIO.c: 22: {
+"25
+[; ;app_files/DIO.c: 25: {
 {
 [e :U _DIO_SetIO ]
-"21
-[; ;app_files/DIO.c: 21: void DIO_SetIO(uint8_t value)
-[v _value `uc ~T0 @X0 1 r1 ]
-"22
-[; ;app_files/DIO.c: 22: {
-[f ]
 "24
-[; ;app_files/DIO.c: 24:     if(value & 0b00000001)
-[e $ ! != & -> _value `i -> 1 `i -> 0 `i 441  ]
+[; ;app_files/DIO.c: 24: void DIO_SetIO(uint8_t value)
+[v _value `uc ~T0 @X0 1 r1 ]
 "25
-[; ;app_files/DIO.c: 25:     {
-{
-"26
-[; ;app_files/DIO.c: 26:         TRISAbits.RA2 = 1;
-[e = . . _TRISAbits 1 2 -> -> 1 `i `uc ]
+[; ;app_files/DIO.c: 25: {
+[f ]
 "27
-[; ;app_files/DIO.c: 27:     }
+[; ;app_files/DIO.c: 27:     if(value & 0b00000001)
+[e $ ! != & -> _value `i -> 1 `i -> 0 `i 441  ]
+"28
+[; ;app_files/DIO.c: 28:     {
+{
+"29
+[; ;app_files/DIO.c: 29:         TRISAbits.RA2 = 1;
+[e = . . _TRISAbits 1 2 -> -> 1 `i `uc ]
+"30
+[; ;app_files/DIO.c: 30:     }
 }
 [e $U 442  ]
-"28
-[; ;app_files/DIO.c: 28:     else
-[e :U 441 ]
-"29
-[; ;app_files/DIO.c: 29:     {
-{
-"30
-[; ;app_files/DIO.c: 30:         TRISAbits.RA2 = 0;
-[e = . . _TRISAbits 1 2 -> -> 0 `i `uc ]
 "31
-[; ;app_files/DIO.c: 31:     }
+[; ;app_files/DIO.c: 31:     else
+[e :U 441 ]
+"32
+[; ;app_files/DIO.c: 32:     {
+{
+"33
+[; ;app_files/DIO.c: 33:         TRISAbits.RA2 = 0;
+[e = . . _TRISAbits 1 2 -> -> 0 `i `uc ]
+"34
+[; ;app_files/DIO.c: 34:     }
 }
 [e :U 442 ]
-"32
-[; ;app_files/DIO.c: 32:     if(value & 0b00000010)
-[e $ ! != & -> _value `i -> 2 `i -> 0 `i 443  ]
-"33
-[; ;app_files/DIO.c: 33:     {
-{
-"34
-[; ;app_files/DIO.c: 34:         TRISAbits.RA3 = 1;
-[e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
 "35
-[; ;app_files/DIO.c: 35:     }
+[; ;app_files/DIO.c: 35:     if(value & 0b00000010)
+[e $ ! != & -> _value `i -> 2 `i -> 0 `i 443  ]
+"36
+[; ;app_files/DIO.c: 36:     {
+{
+"37
+[; ;app_files/DIO.c: 37:         TRISAbits.RA3 = 1;
+[e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
+"38
+[; ;app_files/DIO.c: 38:     }
 }
 [e $U 444  ]
-"36
-[; ;app_files/DIO.c: 36:     else
-[e :U 443 ]
-"37
-[; ;app_files/DIO.c: 37:     {
-{
-"38
-[; ;app_files/DIO.c: 38:         TRISAbits.RA3 = 0;
-[e = . . _TRISAbits 1 3 -> -> 0 `i `uc ]
 "39
-[; ;app_files/DIO.c: 39:     }
+[; ;app_files/DIO.c: 39:     else
+[e :U 443 ]
+"40
+[; ;app_files/DIO.c: 40:     {
+{
+"41
+[; ;app_files/DIO.c: 41:         TRISAbits.RA3 = 0;
+[e = . . _TRISAbits 1 3 -> -> 0 `i `uc ]
+"42
+[; ;app_files/DIO.c: 42:     }
 }
 [e :U 444 ]
-"40
-[; ;app_files/DIO.c: 40:     if(value & 0b00000100)
-[e $ ! != & -> _value `i -> 4 `i -> 0 `i 445  ]
-"41
-[; ;app_files/DIO.c: 41:     {
-{
-"42
-[; ;app_files/DIO.c: 42:         TRISAbits.RA4 = 1;
-[e = . . _TRISAbits 1 4 -> -> 1 `i `uc ]
 "43
-[; ;app_files/DIO.c: 43:     }
+[; ;app_files/DIO.c: 43:     if(value & 0b00000100)
+[e $ ! != & -> _value `i -> 4 `i -> 0 `i 445  ]
+"44
+[; ;app_files/DIO.c: 44:     {
+{
+"45
+[; ;app_files/DIO.c: 45:         TRISAbits.RA4 = 1;
+[e = . . _TRISAbits 1 4 -> -> 1 `i `uc ]
+"46
+[; ;app_files/DIO.c: 46:     }
 }
 [e $U 446  ]
-"44
-[; ;app_files/DIO.c: 44:     else
-[e :U 445 ]
-"45
-[; ;app_files/DIO.c: 45:     {
-{
-"46
-[; ;app_files/DIO.c: 46:         TRISAbits.RA4 = 0;
-[e = . . _TRISAbits 1 4 -> -> 0 `i `uc ]
 "47
-[; ;app_files/DIO.c: 47:     }
+[; ;app_files/DIO.c: 47:     else
+[e :U 445 ]
+"48
+[; ;app_files/DIO.c: 48:     {
+{
+"49
+[; ;app_files/DIO.c: 49:         TRISAbits.RA4 = 0;
+[e = . . _TRISAbits 1 4 -> -> 0 `i `uc ]
+"50
+[; ;app_files/DIO.c: 50:     }
 }
 [e :U 446 ]
-"48
-[; ;app_files/DIO.c: 48:     if(value & 0b00001000)
-[e $ ! != & -> _value `i -> 8 `i -> 0 `i 447  ]
-"49
-[; ;app_files/DIO.c: 49:     {
-{
-"50
-[; ;app_files/DIO.c: 50:         TRISAbits.RA5 = 1;
-[e = . . _TRISAbits 1 5 -> -> 1 `i `uc ]
 "51
-[; ;app_files/DIO.c: 51:     }
+[; ;app_files/DIO.c: 51:     if(value & 0b00001000)
+[e $ ! != & -> _value `i -> 8 `i -> 0 `i 447  ]
+"52
+[; ;app_files/DIO.c: 52:     {
+{
+"53
+[; ;app_files/DIO.c: 53:         TRISAbits.RA5 = 1;
+[e = . . _TRISAbits 1 5 -> -> 1 `i `uc ]
+"54
+[; ;app_files/DIO.c: 54:     }
 }
 [e $U 448  ]
-"52
-[; ;app_files/DIO.c: 52:     else
-[e :U 447 ]
-"53
-[; ;app_files/DIO.c: 53:     {
-{
-"54
-[; ;app_files/DIO.c: 54:         TRISAbits.RA5 = 0;
-[e = . . _TRISAbits 1 5 -> -> 0 `i `uc ]
 "55
-[; ;app_files/DIO.c: 55:     }
+[; ;app_files/DIO.c: 55:     else
+[e :U 447 ]
+"56
+[; ;app_files/DIO.c: 56:     {
+{
+"57
+[; ;app_files/DIO.c: 57:         TRISAbits.RA5 = 0;
+[e = . . _TRISAbits 1 5 -> -> 0 `i `uc ]
+"58
+[; ;app_files/DIO.c: 58:     }
 }
 [e :U 448 ]
-"56
-[; ;app_files/DIO.c: 56: }
+"59
+[; ;app_files/DIO.c: 59: }
 [e :UE 440 ]
 }
-"58
-[; ;app_files/DIO.c: 58: void DIO_Init(void) {
+"61
+[; ;app_files/DIO.c: 61: void DIO_Init(void) {
 [v _DIO_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _DIO_Init ]
 [f ]
-"59
-[; ;app_files/DIO.c: 59:     TRISAbits.RA2 = 1;
-[e = . . _TRISAbits 1 2 -> -> 1 `i `uc ]
-"60
-[; ;app_files/DIO.c: 60:     TRISAbits.RA3 = 1;
-[e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
-"61
-[; ;app_files/DIO.c: 61:     TRISAbits.RA4 = 1;
-[e = . . _TRISAbits 1 4 -> -> 1 `i `uc ]
 "62
-[; ;app_files/DIO.c: 62:     TRISAbits.RA5 = 1;
-[e = . . _TRISAbits 1 5 -> -> 1 `i `uc ]
+[; ;app_files/DIO.c: 62:     uint8_t temp;
+[v _temp `uc ~T0 @X0 1 a ]
 "63
-[; ;app_files/DIO.c: 63: }
+[; ;app_files/DIO.c: 63:     i2c_eeprom_read(12,0,&temp);
+[e ( _i2c_eeprom_read (3 , , -> -> 12 `i `uc -> -> 0 `i `uc &U _temp ]
+"64
+[; ;app_files/DIO.c: 64:     TRISAbits.RA2 = temp&1;
+[e = . . _TRISAbits 1 2 -> & -> _temp `i -> 1 `i `uc ]
+"65
+[; ;app_files/DIO.c: 65:     TRISAbits.RA3 = (temp>>1)&1;
+[e = . . _TRISAbits 1 3 -> & >> -> _temp `i -> 1 `i -> 1 `i `uc ]
+"66
+[; ;app_files/DIO.c: 66:     TRISAbits.RA4 = (temp>>2)&1;
+[e = . . _TRISAbits 1 4 -> & >> -> _temp `i -> 2 `i -> 1 `i `uc ]
+"67
+[; ;app_files/DIO.c: 67:     TRISAbits.RA5 = (temp>>3)&1;
+[e = . . _TRISAbits 1 5 -> & >> -> _temp `i -> 3 `i -> 1 `i `uc ]
+"68
+[; ;app_files/DIO.c: 68: }
 [e :UE 449 ]
+}
+"69
+[; ;app_files/DIO.c: 69: void DIO_SetDefault(uint8_t value)
+[v _DIO_SetDefault `(v ~T0 @X0 1 ef1`uc ]
+"70
+[; ;app_files/DIO.c: 70: {
+{
+[e :U _DIO_SetDefault ]
+"69
+[; ;app_files/DIO.c: 69: void DIO_SetDefault(uint8_t value)
+[v _value `uc ~T0 @X0 1 r1 ]
+"70
+[; ;app_files/DIO.c: 70: {
+[f ]
+"71
+[; ;app_files/DIO.c: 71:     i2c_eeprom_write(12,0,value);
+[e ( _i2c_eeprom_write (3 , , -> -> 12 `i `uc -> -> 0 `i `uc _value ]
+"72
+[; ;app_files/DIO.c: 72: }
+[e :UE 450 ]
 }

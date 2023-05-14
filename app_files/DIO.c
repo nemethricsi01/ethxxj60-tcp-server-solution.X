@@ -1,5 +1,8 @@
 
 #include "DIO.h"
+#include "i2c_eeprom.h"
+#include <xc.h> 
+
 
 void DIO_Write(uint8_t value) {
     DIO1 = value & 0b1;
@@ -56,12 +59,17 @@ void DIO_SetIO(uint8_t value)
 }
 
 void DIO_Init(void) {
-    DIO1_TRIS = 1;
-    DIO2_TRIS = 1;
-    DIO3_TRIS = 1;
-    DIO4_TRIS = 1;
+    uint8_t temp; 
+    i2c_eeprom_read(I2C_EEPROM_ADDR,0,&temp);
+    DIO1_TRIS = temp&1;
+    DIO2_TRIS = (temp>>1)&1;
+    DIO3_TRIS = (temp>>2)&1;
+    DIO4_TRIS = (temp>>3)&1;
 }
-
+void DIO_SetDefault(uint8_t value)
+{
+    i2c_eeprom_write(I2C_EEPROM_ADDR,0,value);
+}
 
 
 

@@ -40,45 +40,17 @@
  *  THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  */
 
+#include <string.h>
+
 #include "mcc_generated_files/mcc.h"
 #include "app_files/tcp_server_demo.h"
-
+#include "app_files/i2c_eeprom.h"
+#include "app_files/UART.h"
+#include "app_files/DIO.h"
 /*
                          Main application
  */
-void spi_init(void)
-    {
-        SSP1CON1bits.SSPEN = 1;
-        SSP1CON1bits.SSPM = 1;//clk:fosc/16
-    }
 
-void FlashRead(void)
-{
-    int i;
-    int temp;
-    LATFbits.LATF7 = 0;
-    temp = SSP1BUF;
-    SSP1BUF = 0x52;
-    while(PIR1bits.SSPIF != 1);
-    PIR1bits.SSPIF = 0;
-    for(i = 0; i< 3;i++)
-    {
-        SSP1BUF = 0x00;//ADR 0
-    while(PIR1bits.SSPIF != 1);
-    PIR1bits.SSPIF = 0;
-    }
-    for(i = 0; i< 4;i++)
-    {
-        SSP1BUF = 0x00;//ADR 0
-    while(PIR1bits.SSPIF != 1);
-    PIR1bits.SSPIF = 0;
-    }
-    SSP1BUF = 0x00;//ADR 0
-    while(PIR1bits.SSPIF != 1);
-    PIR1bits.SSPIF = 0;
-    temp = SSP1BUF;
-    LATFbits.LATF7 = 1;
-}
 void main(void)
 {
     // Initialize the device
@@ -100,24 +72,31 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     TRISBbits.RB4 = 0;
-    TRISCbits.RC6 = 0;
-    TRISCbits.RC3 = 0;//sck
-    TRISCbits.RC5 = 0;//sdo
+    TRISCbits.RC6 = 0;//TX
+    TRISCbits.RC7 = 1;//RX
+    TRISCbits.RC3 = 1;//sck
     TRISCbits.RC4 = 1;//sdi
-    TRISFbits.RF7 = 0;//CS
+    TRISEbits.RE0 = 1;
+    TRISEbits.RE1 = 1;
     
     ADCON1bits.PCFG = 0b1111;//all analog DIO ports need to be set to digital in order to be able to read the digitally
     //setup for uart
-    TXSTA1bits.TXEN = 1;
-    RCSTA1bits.SPEN = 1;
+
     //brgh = 1  brg16 = 1 
     BAUDCON1bits.BRG16 = 1;
     TXSTA1bits.BRGH = 1;
     SPBRG = 53;//115200bps
+    RCSTAbits.SPEN = 1;
+    TXSTAbits.TXEN= 1;
+    RCSTAbits.CREN = 1;
     
-    spi_init();
+    //I2C SETUP //TODO move this to the eeprom file
+    SSP1CON1bits.SSPEN = 0;
+    SSP1CON1bits.SSPM = 0b1000;//master mode clk is: fosc/(4*(sspadd+1))
+    SSPADD = 62;//400khz
+    SSP1CON1bits.SSPEN = 1;
     
-    
+    DIO_Init();
     
     
     while (1)
@@ -125,9 +104,7 @@ void main(void)
         Network_Manage();
         TCP_Demo_EchoServer();
         LATBbits.LATB4 ^= 1;
-        TXREG1 = 'a';
-        while (TXSTA1bits.TRMT != 1);
-        FlashRead();
+        uart_pollforreceive();
         //__delay_ms(100);
     }
 }

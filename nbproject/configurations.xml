@@ -7,6 +7,8 @@
       <logicalFolder name="f1" displayName="app_files" projectFiles="true">
         <itemPath>app_files/tcp_server_demo.h</itemPath>
         <itemPath>app_files/DIO.h</itemPath>
+        <itemPath>app_files/i2c_eeprom.h</itemPath>
+        <itemPath>app_files/UART.h</itemPath>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
@@ -55,6 +57,8 @@
       <logicalFolder name="f1" displayName="app_files" projectFiles="true">
         <itemPath>app_files/tcp_server_demo.c</itemPath>
         <itemPath>app_files/DIO.c</itemPath>
+        <itemPath>app_files/i2c_eeprom.c</itemPath>
+        <itemPath>app_files/UART.c</itemPath>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
@@ -112,7 +116,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.30</languageToolchainVersion>
+        <languageToolchainVersion>2.32</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -287,7 +291,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
         <property key="freeze.timers" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -375,7 +379,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
         <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

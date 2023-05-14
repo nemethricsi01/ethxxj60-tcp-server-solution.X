@@ -18,35 +18,35 @@ extern double __fpnormalize(double);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\xc8debug.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 2 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
 
 
 
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\features.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long int wchar_t;
-# 122 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 122 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 168 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 204 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __uint24 uint24_t;
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
 
 
 int atoi (const char *);
@@ -99,7 +99,7 @@ uldiv_t uldiv (unsigned long, unsigned long);
 
 
 size_t __ctype_get_mb_cur_max(void);
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\xc8debug.h" 2 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 2 3
 
 
 
@@ -115,21 +115,21 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 142 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long intptr_t;
-# 158 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 158 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef signed char int8_t;
 
 
 
 
 typedef short int16_t;
-# 173 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 173 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long int32_t;
 
 
@@ -137,7 +137,7 @@ typedef long int32_t;
 
 
 typedef long long int64_t;
-# 188 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 188 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long long intmax_t;
 
 
@@ -150,7 +150,7 @@ typedef unsigned char uint8_t;
 
 
 typedef unsigned short uint16_t;
-# 209 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 209 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned long uint32_t;
 
 
@@ -158,9 +158,9 @@ typedef unsigned long uint32_t;
 
 
 typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 229 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 2 3
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
 
 
 typedef int8_t int_fast8_t;
@@ -193,13 +193,13 @@ typedef uint24_t uint_fast24_t;
 typedef uint32_t uint_least32_t;
 
 typedef uint64_t uint_least64_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/stdint.h" 1 3
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/stdint.h" 1 3
 typedef int16_t int_fast16_t;
 typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 2 3
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
 # 5 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\\pic\\include\\builtins.h" 2 3
 
 
@@ -7035,9 +7035,9 @@ void PIN_MANAGER_Initialize (void);
 void PIN_MANAGER_IOC(void);
 # 52 "app_files/../mcc_generated_files/mcc.h" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdbool.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
 # 54 "app_files/../mcc_generated_files/mcc.h" 2
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\conio.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 1 3
 
 
 
@@ -7045,13 +7045,13 @@ void PIN_MANAGER_IOC(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\errno.h" 1 3
-# 12 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\errno.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\errno.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\errno.h" 3
 extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\conio.h" 2 3
+# 8 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 2 3
 
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\\pic\\include\\__null.h" 1 3
-# 9 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\conio.h" 2 3
+# 9 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 2 3
 
 
 
@@ -7465,13 +7465,14 @@ void timersInit(void);
 void SYSTEM_Initialize(void);
 # 85 "app_files/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 23 "app_files/tcp_server_demo.c" 2
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\time.h" 1 3
-# 33 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\time.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 76 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 22 "app_files/tcp_server_demo.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\time.h" 1 3
+# 33 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\time.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 76 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long long time_t;
-# 293 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 293 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef void * timer_t;
 
 
@@ -7483,7 +7484,7 @@ typedef int clockid_t;
 
 
 typedef unsigned long clock_t;
-# 313 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 313 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 struct timespec { time_t tv_sec; long tv_nsec; };
 
 
@@ -7491,9 +7492,9 @@ struct timespec { time_t tv_sec; long tv_nsec; };
 
 
 typedef int pid_t;
-# 411 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 411 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef struct __locale_struct * locale_t;
-# 33 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\time.h" 2 3
+# 33 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\time.h" 2 3
 
 
 
@@ -7525,7 +7526,7 @@ struct tm *localtime (const time_t *);
 char *asctime (const struct tm *);
 char *ctime (const time_t *);
 int timespec_get(struct timespec *, int);
-# 73 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\time.h" 3
+# 73 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\time.h" 3
 size_t strftime_l (char * restrict, size_t, const char * restrict, const struct tm * restrict, locale_t);
 
 struct tm *gmtime_r (const time_t *restrict, struct tm *restrict);
@@ -7539,7 +7540,7 @@ struct itimerspec {
  struct timespec it_interval;
  struct timespec it_value;
 };
-# 102 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\time.h" 3
+# 102 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\time.h" 3
 int nanosleep (const struct timespec *, struct timespec *);
 int clock_getres (clockid_t, struct timespec *);
 int clock_gettime (clockid_t, struct timespec *);
@@ -7565,12 +7566,13 @@ extern int daylight;
 extern long timezone;
 extern int getdate_err;
 struct tm *getdate (const char *);
-# 24 "app_files/tcp_server_demo.c" 2
+# 23 "app_files/tcp_server_demo.c" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 1 3
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 2 3
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\string.h" 2 3
 
 
 void *memcpy (void *restrict, const void *restrict, size_t);
@@ -7603,7 +7605,7 @@ char *strtok (char *restrict, const char *restrict);
 size_t strlen (const char *);
 
 char *strerror (int);
-# 65 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
+# 65 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\string.h" 3
 char *strtok_r (char *restrict, const char *restrict, char **restrict);
 int strerror_r (int, char *, size_t);
 char *stpcpy(char *restrict, const char *restrict);
@@ -7620,10 +7622,11 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 26 "app_files/tcp_server_demo.c" 2
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 25 "app_files/tcp_server_demo.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
 
 
 
@@ -7635,14 +7638,14 @@ typedef void * va_list[1];
 
 
 typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
 typedef union _G_fpos64_t {
  char __opaque[16];
  double __align;
@@ -7759,7 +7762,8 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 27 "app_files/tcp_server_demo.c" 2
+# 26 "app_files/tcp_server_demo.c" 2
+
 # 1 "app_files/tcp_server_demo.h" 1
 # 33 "app_files/tcp_server_demo.h"
 sockaddr_in4_t remoteSocket;
@@ -7769,7 +7773,8 @@ void TCP_Demo_Client(void);
 
 
 void TCP_Demo_EchoServer(void);
-# 28 "app_files/tcp_server_demo.c" 2
+# 27 "app_files/tcp_server_demo.c" 2
+
 # 1 "app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h" 1
 # 62 "app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h"
 typedef enum
@@ -7890,14 +7895,32 @@ int16_t TCP_GetReceivedData(tcpTCB_t *tcbPtr);
 int16_t TCP_GetRxLength(tcpTCB_t *tcbPtr);
 # 411 "app_files/../mcc_generated_files/TCPIPLibrary/tcpv4.h"
 void TCP_Update(void);
-# 29 "app_files/tcp_server_demo.c" 2
+# 28 "app_files/tcp_server_demo.c" 2
+
 # 1 "app_files/DIO.h" 1
-# 48 "app_files/DIO.h"
+# 47 "app_files/DIO.h"
 void DIO_Write(uint8_t value);
 uint8_t DIO_Read(void);
 void DIO_Init(void);
 void DIO_SetIO(uint8_t value);
+void DIO_SetDefault(uint8_t value);
+# 29 "app_files/tcp_server_demo.c" 2
+
+# 1 "app_files/UART.h" 1
+# 39 "app_files/UART.h"
+uint8_t tx_buffer[100];
+uint8_t rx_buffer[100];
+uint8_t rx_buffptr;
+uint8_t tx_buffptr;
+uint8_t uart_init(void);
+uint8_t uart_write(uint8_t data);
+uint8_t uart_writebuff(uint8_t *data,uint8_t size);
+uint8_t uart_pollforreceive(void);
+uint8_t uart_flushtx(void);
+uint8_t uart_flushrx(void);
+uint8_t uart_getrx_size(void);
 # 30 "app_files/tcp_server_demo.c" 2
+
 
 
 
@@ -7911,8 +7934,8 @@ void TCP_Demo_EchoServer(void) {
 
 
 
-    static uint8_t rxdataPort7[20];
-    static uint8_t txdataPort7[20];
+    static uint8_t rxdataPort7[256];
+    static uint8_t txdataPort7[256];
 
 
     uint16_t rxLen, txLen, i;
@@ -7966,6 +7989,44 @@ void TCP_Demo_EchoServer(void) {
                             }
 
                             break;
+                        case 0x24:
+                            if (rxdataPort7[1] == 0x18)
+                            {
+                                txdataPort7[0] = 0x24;
+                                txdataPort7[1] = 0x18;
+                                uint8_t bytehigh,bytelow;
+                                bytelow = rxdataPort7[2];
+                                bytehigh = rxdataPort7[3];
+                                uint8_t* ptr;
+                                ptr = &rxdataPort7+2;
+                                uart_writebuff(&rxdataPort7,bytelow);
+                                datalen = 2;
+
+                            }
+                            if (rxdataPort7[1] == 0x24)
+                            {
+
+                            }
+                            if (rxdataPort7[1] == 0x3c)
+                            {
+                                txdataPort7[0] = 0x24;
+                                txdataPort7[1] = 0x3c;
+                                txdataPort7[2] = uart_getrx_size();
+                                datalen = 3;
+                            }
+                            if (rxdataPort7[1] == 0x42)
+                            {
+                                txdataPort7[0] = 0x24;
+                                txdataPort7[1] = 0x42;
+                                uart_flushtx();
+                                datalen = 2;
+                            }
+                            if (rxdataPort7[1] == 0x5A)
+                            {
+                                uart_flushrx();
+                            }
+                            break;
+
                         case 0x5A:
                             if (rxdataPort7[1] == 0x18)
                             {
@@ -7984,14 +8045,26 @@ void TCP_Demo_EchoServer(void) {
                             if (rxdataPort7[1] == 0x30)
                             {
                                 txdataPort7[0] = 0x5A;
-                                txdataPort7[1] = 0x24;
+                                txdataPort7[1] = 0x30;
                                 DIO_SetIO(rxdataPort7[2]);
                                 datalen = 3;
                             }
                             break;
+                            if (rxdataPort7[1] == 0x3C)
+                            {
+                                txdataPort7[0] = 0x5A;
+                                txdataPort7[1] = 0x3C;
+                                DIO_SetDefault(rxdataPort7[2]);
+                                datalen = 2;
+                            }
+                            break;
                         default:
-                            memset(txdataPort7, 0, sizeof (txdataPort7));
-                            datalen = 4;
+                            txdataPort7[0] = 0xff;
+                            txdataPort7[1] = 0xff;
+                            txdataPort7[2] = rxdataPort7[0];
+                            txdataPort7[3] = rxdataPort7[1];
+                            txdataPort7[4] = 0xaa;
+                            datalen = 5;
                             break;
                     }
                     TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));

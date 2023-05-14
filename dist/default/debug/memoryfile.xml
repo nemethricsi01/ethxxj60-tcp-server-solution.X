@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\ethxxj60-tcp-server-solution.X.debug.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>131064</length>
+      <used>47128</used>
+      <free>83936</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>3808</length>
+      <used>2643</used>
+      <free>1165</free>
+    </memory>
+  </executable>
+</project>

@@ -80,10 +80,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/TCPIPLibrary/lldp.c: 653:      if (sub == PORT_INTERFACE_NAME)
 [c E1016 0 1 2 3 4 5 6 7 .. ]
 [n E1016 . reserved PORT_INTERFACE_ALIAS PORT_COMPONENT PORT_MAC_ADDRESS PORT_NETWORK_ADDRESS PORT_INTERFACE_NAME PORT_AGENT_CIRCUIT_ID PORT_LOCALLY_ASSIGNED  ]
-"113 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\stdio.h
+"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"54 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h: 54: size_t strlen (const char *);
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 54: size_t strlen (const char *);
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "115 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
 [; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 115: uint16_t ETH_WriteString(const char *string);

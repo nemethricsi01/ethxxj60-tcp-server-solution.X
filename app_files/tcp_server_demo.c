@@ -27,6 +27,7 @@
 #include "tcp_server_demo.h"
 #include "../mcc_generated_files/TCPIPLibrary/tcpv4.h"
 #include "DIO.h"
+#include "UART.h"
 
 /*******************************************************************************/
 /* TCP Demo */
@@ -40,8 +41,8 @@ void TCP_Demo_EchoServer(void) {
 
 
     // Create the TX and RX Server's buffers
-    static uint8_t rxdataPort7[20];
-    static uint8_t txdataPort7[20];
+    static uint8_t rxdataPort7[256];
+    static uint8_t txdataPort7[256];
 
 
     uint16_t rxLen, txLen, i;
@@ -95,6 +96,44 @@ void TCP_Demo_EchoServer(void) {
                             }
 
                             break;
+                        case 0x24:
+                            if (rxdataPort7[1] == 0x18) 
+                            {
+                                txdataPort7[0] = 0x24;
+                                txdataPort7[1] = 0x18;
+                                uint8_t bytehigh,bytelow;
+                                bytelow     = rxdataPort7[2];
+                                bytehigh    = rxdataPort7[3];
+                                uint8_t* ptr;
+                                ptr  = &rxdataPort7+4;
+                                uart_writebuff(ptr,bytelow);
+                                datalen = 2;
+                                
+                            }
+                            if (rxdataPort7[1] == 0x24) 
+                            {
+                                
+                            }
+                            if (rxdataPort7[1] == 0x3c) //get rec buff size
+                            {
+                                txdataPort7[0] = 0x24;
+                                txdataPort7[1] = 0x3c;
+                                txdataPort7[2] = uart_getrx_size();
+                                datalen = 3;
+                            }
+                            if (rxdataPort7[1] == 0x42) 
+                            {
+                                txdataPort7[0] = 0x24;
+                                txdataPort7[1] = 0x42;
+                                uart_flushtx();
+                                datalen = 2;
+                            }
+                            if (rxdataPort7[1] == 0x5A) 
+                            {
+                                uart_flushrx();
+                            }
+                            break;
+                            
                         case 0x5A:
                             if (rxdataPort7[1] == 0x18)//DIO set port state
                             {
@@ -113,14 +152,26 @@ void TCP_Demo_EchoServer(void) {
                             if (rxdataPort7[1] == 0x30)//DIO setIO
                             {
                                 txdataPort7[0] = 0x5A;
-                                txdataPort7[1] = 0x24;
+                                txdataPort7[1] = 0x30;
                                 DIO_SetIO(rxdataPort7[2]);
                                 datalen = 3;
                             }
                             break;
+                            if (rxdataPort7[1] == 0x3C)//DIO set default
+                            {
+                                txdataPort7[0] = 0x5A;
+                                txdataPort7[1] = 0x3C;
+                                DIO_SetDefault(rxdataPort7[2]);
+                                datalen = 2;
+                            }
+                            break;
                         default:
-                            memset(txdataPort7, 0, sizeof (txdataPort7));
-                            datalen = 4;
+                            txdataPort7[0] = 0xff;
+                            txdataPort7[1] = 0xff;
+                            txdataPort7[2] = rxdataPort7[0];
+                            txdataPort7[3] = rxdataPort7[1];
+                            txdataPort7[4] = 0xaa;//error code??????????
+                            datalen = 5;
                             break;
                     }
                     TCP_InsertRxBuffer(&port7TCB, rxdataPort7, sizeof (rxdataPort7));
