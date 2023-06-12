@@ -7712,7 +7712,14 @@ void SYSTEM_Initialize(void);
 # 85 "mcc_generated_files/TCPIPLibrary/../mcc.h"
 void OSCILLATOR_Initialize(void);
 # 47 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c" 2
-
+# 1 "mcc_generated_files/TCPIPLibrary/../../../ethxxj60-tcp-server-solution.X/app_files/i2c_eeprom.h" 1
+# 39 "mcc_generated_files/TCPIPLibrary/../../../ethxxj60-tcp-server-solution.X/app_files/i2c_eeprom.h"
+void i2c_start(void);
+void i2c_stop(void);
+void i2c_repstart(void);
+uint8_t i2c_eeprom_write(uint8_t devaddr, uint8_t memaddr,uint8_t data);
+uint8_t i2c_eeprom_read(uint8_t devaddr, uint8_t memaddr,uint8_t *data);
+# 48 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c" 2
 
 
 
@@ -7720,6 +7727,7 @@ void OSCILLATOR_Initialize(void);
 volatile ethernetDriver_t ethData;
 # 91 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
 uint8_t ethListSize;
+uint8_t macaddress[6];
 
 static txPacket_t txData[(20)];
 
@@ -7834,7 +7842,7 @@ void ETH_Init(void)
 
 
     while(!ESTATbits.PHYRDY);
-# 218 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
+# 219 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
     MACON1 = 0b00001101; __nop();
     MACON3 = 0b10110011; __nop();
     MACON4 = 0b00000000; __nop();
@@ -7861,14 +7869,26 @@ void ETH_Init(void)
     MAMXFL = (1518);
 
 
-    mac = MAC_getAddress();
+    uint8_t temp;
+    i2c_eeprom_read(0xA0,0xff,&temp);
+    macaddress[0] = temp;
+    i2c_eeprom_read(0xA0,0xfe,&temp);
+    macaddress[1] = temp;
+    i2c_eeprom_read(0xA0,0xfd,&temp);
+    macaddress[2] = temp;
+    i2c_eeprom_read(0xA0,0xfc,&temp);
+    macaddress[3] = temp;
+    i2c_eeprom_read(0xA0,0xfb,&temp);
+    macaddress[4] = temp;
+    i2c_eeprom_read(0xA0,0xfa,&temp);
+    macaddress[5] = temp;
+    MAADR1 = macaddress[5];__nop();
+    MAADR2 = macaddress[4];__nop();
+    MAADR3 = macaddress[3];__nop();
+    MAADR4 = macaddress[2];__nop();
+    MAADR5 = macaddress[1];__nop();
+    MAADR6 = macaddress[0];__nop();
 
-    MAADR1 = mac->mac_array[0];__nop();
-    MAADR2 = mac->mac_array[1];__nop();
-    MAADR3 = mac->mac_array[2];__nop();
-    MAADR4 = mac->mac_array[3];__nop();
-    MAADR5 = mac->mac_array[4];__nop();
-    MAADR6 = mac->mac_array[5];__nop();
 
 
 
@@ -8017,7 +8037,7 @@ phyError_t PHY_Write(phyRegister_t reg, uint16_t data)
     uint8_t GIESave;
 
     MIREGADR = reg;
-# 411 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
+# 424 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
     errataTemp = data;
     GIESave = INTCON;
     INTCON = 0;
@@ -8220,7 +8240,7 @@ uint16_t ETH_WriteString(const char *string)
     }
     return length;
 }
-# 621 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
+# 634 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
 uint16_t ETH_WriteBlock(const char *buffer, uint16_t length)
 {
     const char *p = buffer;
@@ -8388,7 +8408,7 @@ error_msg ETH_SendQueued(void)
         return BUFFER_BUSY;
     }
 }
-# 796 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
+# 809 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
 void ETH_Insert(char *data, uint16_t len, uint16_t offset)
 {
     uint16_t current_tx_ptr = EWRPT;
@@ -8436,7 +8456,7 @@ void ETH_Flush(void)
 
     EIEbits.PKTIE = 1;
 }
-# 887 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
+# 900 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
 error_msg ETH_Copy(uint16_t len)
 {
     uint16_t timer;
@@ -8562,7 +8582,7 @@ static uint16_t ETH_ComputeChecksum(uint16_t len, uint16_t seed)
 
     return (uint16_t)cksm;
 }
-# 1020 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
+# 1033 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
 uint16_t ETH_TxComputeChecksum(uint16_t position, uint16_t len, uint16_t seed)
 {
     uint16_t rxptr;
@@ -8807,7 +8827,7 @@ void ETH_RemovePacket(txPacket_t* pPacket)
     {
         return;
     }
-# 1281 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
+# 1294 "mcc_generated_files/TCPIPLibrary/ETHxxJ6x_driver.c"
     if( pPacket->nextPacket == ((void*)0) )
     {
         pTail = pPacket->prevPacket;

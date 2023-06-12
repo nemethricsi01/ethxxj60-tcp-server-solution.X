@@ -7998,14 +7998,24 @@ void TCP_Demo_EchoServer(void) {
                                 bytelow = rxdataPort7[2];
                                 bytehigh = rxdataPort7[3];
                                 uint8_t* ptr;
-                                ptr = &rxdataPort7+2;
-                                uart_writebuff(&rxdataPort7,bytelow);
+                                ptr = &rxdataPort7+4;
+                                uart_writebuff(ptr,bytelow);
                                 datalen = 2;
 
                             }
                             if (rxdataPort7[1] == 0x24)
                             {
+                                txdataPort7[0] = 0x24;
+                                txdataPort7[1] = 0x18;
+                                uint8_t bytehigh,bytelow;
+                                bytelow = rxdataPort7[2];
+                                bytehigh = rxdataPort7[3];
+                                uint32_t length = bytehigh<<8;
+                                length |= bytelow;
+                                for(int i = 0;i<length;i++)
+                                {
 
+                                }
                             }
                             if (rxdataPort7[1] == 0x3c)
                             {

@@ -8348,10 +8348,10 @@ char *makeIpv4AddresstoStr(uint32_t addr);
 
 
 
+
 time_t arpTimer;
 static void Network_SaveStartPosition(void);
 uint16_t networkStartPosition;
-
 const char *network_errors[] = { "ERROR","SUCCESS","LINK_NOT_FOUND","BUFFER_BUSY",
                              "TX_LOGIC_NOT_IDLE","MAC_NOT_FOUND",
                              "IP_WRONG_VERSION","IPV4_CHECKSUM_FAILS",
@@ -8363,6 +8363,7 @@ const char *network_errors[] = { "ERROR","SUCCESS","LINK_NOT_FOUND","BUFFER_BUSY
 void Network_Init(void)
 {
     ETH_Init();
+
     ARPV4_Init();
     IPV4_Init();
     DHCP_init();

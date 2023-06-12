@@ -1129,36 +1129,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;app_files/i2c_eeprom.c: 78:     PIR1bits.SSP1IF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "79
-[; ;app_files/i2c_eeprom.c: 79:     uint8_t temp = SSP1BUF;
-[v _temp `uc ~T0 @X0 1 a ]
-[e = _temp _SSP1BUF ]
-"80
-[; ;app_files/i2c_eeprom.c: 80:     while(PIR1bits.SSP1IF != 1);
+[; ;app_files/i2c_eeprom.c: 79:     while(SSP1CON2bits.RCEN != 0);
 [e $U 473  ]
 [e :U 474 ]
 [e :U 473 ]
-[e $ != -> . . _PIR1bits 0 3 `i -> 1 `i 474  ]
+[e $ != -> . . _SSP1CON2bits 0 3 `i -> 0 `i 474  ]
 [e :U 475 ]
+"80
+[; ;app_files/i2c_eeprom.c: 80:     static volatile uint8_t temp;
+[v F3822 `Vuc ~T0 @X0 1 s temp ]
 "81
-[; ;app_files/i2c_eeprom.c: 81:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;app_files/i2c_eeprom.c: 81:     temp = SSP1BUF;
+[e = F3822 _SSP1BUF ]
 "82
-[; ;app_files/i2c_eeprom.c: 82:     SSP1CON2bits.ACKDT = 1;
-[e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
+[; ;app_files/i2c_eeprom.c: 82:     *data = temp;
+[e = *U _data F3822 ]
 "83
-[; ;app_files/i2c_eeprom.c: 83:     SSP1CON2bits.ACKEN = 1;
-[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
-"84
-[; ;app_files/i2c_eeprom.c: 84:     while(PIR1bits.SSP1IF != 1);
+[; ;app_files/i2c_eeprom.c: 83:     while(PIR1bits.SSP1IF != 1);
 [e $U 476  ]
 [e :U 477 ]
 [e :U 476 ]
 [e $ != -> . . _PIR1bits 0 3 `i -> 1 `i 477  ]
 [e :U 478 ]
+"84
+[; ;app_files/i2c_eeprom.c: 84:     PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "85
-[; ;app_files/i2c_eeprom.c: 85:     i2c_stop();
-[e ( _i2c_stop ..  ]
+[; ;app_files/i2c_eeprom.c: 85:     SSP1CON2bits.ACKDT = 1;
+[e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
 "86
-[; ;app_files/i2c_eeprom.c: 86: }
+[; ;app_files/i2c_eeprom.c: 86:     SSP1CON2bits.ACKEN = 1;
+[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+"87
+[; ;app_files/i2c_eeprom.c: 87:     while(PIR1bits.SSP1IF != 1);
+[e $U 479  ]
+[e :U 480 ]
+[e :U 479 ]
+[e $ != -> . . _PIR1bits 0 3 `i -> 1 `i 480  ]
+[e :U 481 ]
+"88
+[; ;app_files/i2c_eeprom.c: 88:     i2c_stop();
+[e ( _i2c_stop ..  ]
+"89
+[; ;app_files/i2c_eeprom.c: 89: }
 [e :UE 460 ]
 }

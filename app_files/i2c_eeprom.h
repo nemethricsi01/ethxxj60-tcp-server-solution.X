@@ -34,7 +34,7 @@
 #include <xc.h> // include processor files - each processor file is guarded.  
 
 
-#define I2C_EEPROM_ADDR 12
+#define I2C_EEPROM_ADDR 0xA0
 
 void i2c_start(void);
 void i2c_stop(void);

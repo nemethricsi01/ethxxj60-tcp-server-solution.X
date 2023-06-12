@@ -7102,7 +7102,7 @@ void DIO_SetIO(uint8_t value)
 
 void DIO_Init(void) {
     uint8_t temp;
-    i2c_eeprom_read(12,0,&temp);
+    i2c_eeprom_read(0xA0,0,&temp);
     TRISAbits.RA2 = temp&1;
     TRISAbits.RA3 = (temp>>1)&1;
     TRISAbits.RA4 = (temp>>2)&1;
@@ -7110,5 +7110,5 @@ void DIO_Init(void) {
 }
 void DIO_SetDefault(uint8_t value)
 {
-    i2c_eeprom_write(12,0,value);
+    i2c_eeprom_write(0xA0,0,value);
 }

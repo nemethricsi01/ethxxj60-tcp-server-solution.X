@@ -1031,8 +1031,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;app_files/DIO.c: 62:     uint8_t temp;
 [v _temp `uc ~T0 @X0 1 a ]
 "63
-[; ;app_files/DIO.c: 63:     i2c_eeprom_read(12,0,&temp);
-[e ( _i2c_eeprom_read (3 , , -> -> 12 `i `uc -> -> 0 `i `uc &U _temp ]
+[; ;app_files/DIO.c: 63:     i2c_eeprom_read(0xA0,0,&temp);
+[e ( _i2c_eeprom_read (3 , , -> -> 160 `i `uc -> -> 0 `i `uc &U _temp ]
 "64
 [; ;app_files/DIO.c: 64:     TRISAbits.RA2 = temp&1;
 [e = . . _TRISAbits 1 2 -> & -> _temp `i -> 1 `i `uc ]
@@ -1063,8 +1063,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;app_files/DIO.c: 70: {
 [f ]
 "71
-[; ;app_files/DIO.c: 71:     i2c_eeprom_write(12,0,value);
-[e ( _i2c_eeprom_write (3 , , -> -> 12 `i `uc -> -> 0 `i `uc _value ]
+[; ;app_files/DIO.c: 71:     i2c_eeprom_write(0xA0,0,value);
+[e ( _i2c_eeprom_write (3 , , -> -> 160 `i `uc -> -> 0 `i `uc _value ]
 "72
 [; ;app_files/DIO.c: 72: }
 [e :UE 450 ]

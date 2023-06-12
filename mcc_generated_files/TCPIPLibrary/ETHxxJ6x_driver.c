@@ -44,7 +44,7 @@ MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE TER
 #include <stdbool.h>
 #include "physical_layer_interface.h"
 #include "../mcc.h"
-
+#include "../../../ethxxj60-tcp-server-solution.X/app_files/i2c_eeprom.h"
 // Note this driver is half duplex because the HW cannot automatically negotiate full-duplex
 // If full duplex is desired, both ends of the link must be manually configured.
 // the "out of box" experience dictates half duplex mode.
@@ -89,6 +89,7 @@ volatile ethernetDriver_t ethData;
 // This is to work around the 110110 LSB errata and to control RDPTR WRPTR update counts
 
 uint8_t ethListSize;
+uint8_t macaddress[6];
 
 static txPacket_t txData[MAX_TX_PACKETS];
 
@@ -241,14 +242,26 @@ void ETH_Init(void)
     MAMXFL  = MAX_TX_PACKET_SIZE;
 
     // Setup MAC address to MADDR registers
-    mac = MAC_getAddress();
-
-    MAADR1  = mac->mac_array[0];NOP();
-    MAADR2  = mac->mac_array[1];NOP();
-    MAADR3  = mac->mac_array[2];NOP();
-    MAADR4  = mac->mac_array[3];NOP();
-    MAADR5  = mac->mac_array[4];NOP();
-    MAADR6  = mac->mac_array[5];NOP();
+    uint8_t temp;
+    i2c_eeprom_read(I2C_EEPROM_ADDR,0xff,&temp);
+    macaddress[0] = temp;
+    i2c_eeprom_read(I2C_EEPROM_ADDR,0xfe,&temp);
+    macaddress[1] = temp;
+    i2c_eeprom_read(I2C_EEPROM_ADDR,0xfd,&temp);
+    macaddress[2] = temp;
+    i2c_eeprom_read(I2C_EEPROM_ADDR,0xfc,&temp);
+    macaddress[3] = temp;
+    i2c_eeprom_read(I2C_EEPROM_ADDR,0xfb,&temp);
+    macaddress[4] = temp;
+    i2c_eeprom_read(I2C_EEPROM_ADDR,0xfa,&temp);
+    macaddress[5] = temp;
+    MAADR1  = macaddress[5];NOP();
+    MAADR2  = macaddress[4];NOP();
+    MAADR3  = macaddress[3];NOP();
+    MAADR4  = macaddress[2];NOP();
+    MAADR5  = macaddress[1];NOP();
+    MAADR6  = macaddress[0];NOP();
+    
 
     // Configure the receive filter
 //    ERXFCON = 0b10101001; //UCEN,OR,CRCEN,MPEN,BCEN (unicast,crc,magic packet,broadcast)

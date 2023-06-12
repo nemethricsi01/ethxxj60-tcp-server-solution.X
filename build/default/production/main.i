@@ -7569,6 +7569,132 @@ void DIO_SetIO(uint8_t value);
 void DIO_SetDefault(uint8_t value);
 # 49 "main.c" 2
 
+# 1 "./mcc_generated_files/TCPIPLibrary/physical_layer_interface.h" 1
+# 48 "./mcc_generated_files/TCPIPLibrary/physical_layer_interface.h"
+typedef struct
+{
+ unsigned error:1;
+ unsigned pktReady:1;
+ unsigned up:1;
+ unsigned idle:1;
+ unsigned linkChange:1;
+        unsigned bufferBusy:1;
+        unsigned :3;
+        uint16_t saveRDPT;
+        uint16_t saveWRPT;
+} ethernetDriver_t;
+
+typedef struct
+{
+    uint16_t flags;
+    uint16_t packetStart;
+    uint16_t packetEnd;
+
+    void *prevPacket;
+    void *nextPacket;
+} txPacket_t;
+
+
+
+typedef union
+{
+    uint8_t mac_array[6];
+    struct { uint8_t byte1,byte2,byte3,byte4,byte5,byte6; } s;
+} mac48Address_t;
+
+typedef union
+{
+    uint8_t mac_array[8];
+    struct { uint8_t byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8; } s;
+} mac64Address_t;
+
+extern mac48Address_t hostMacAddress;
+extern const mac48Address_t broadcastMAC = {0xff,0xff,0xff,0xff,0xff,0xff};
+
+const mac48Address_t *MAC_getAddress(void);
+
+
+extern volatile ethernetDriver_t ethData;
+
+
+
+
+
+void ETH_Init(void);
+void ETH_EventHandler(void);
+void ETH_NextPacketUpdate(void);
+void ETH_ResetReceiver(void);
+void ETH_SendSystemReset(void);
+
+
+uint16_t ETH_ReadBlock(void*, uint16_t);
+uint8_t ETH_Read8(void);
+uint16_t ETH_Read16(void);
+uint32_t ETH_Read24(void);
+uint32_t ETH_Read32(void);
+void ETH_Dump(uint16_t);
+void ETH_Flush(void);
+
+uint16_t ETH_GetFreeTxBufferSize(void);
+
+error_msg ETH_WriteStart(const mac48Address_t *dest_mac, uint16_t type);
+uint16_t ETH_WriteString(const char *string);
+uint16_t ETH_WriteBlock(const char *, uint16_t);
+void ETH_Write8(uint8_t);
+void ETH_Write16(uint16_t);
+void ETH_Write24(uint32_t data);
+void ETH_Write32(uint32_t);
+void ETH_Insert(char *,uint16_t, uint16_t);
+error_msg ETH_Copy(uint16_t);
+error_msg ETH_Send(void);
+
+uint16_t ETH_TxComputeChecksum(uint16_t position, uint16_t len, uint16_t seed);
+uint16_t ETH_RxComputeChecksum(uint16_t len, uint16_t seed);
+
+void ETH_GetMAC(uint8_t *);
+void ETH_SetMAC(uint8_t *);
+uint16_t ETH_GetWritePtr();
+void ETH_SaveRDPT(void);
+void ETH_ResetReadPtr();
+uint16_t ETH_GetReadPtr(void);
+void ETH_SetReadPtr(uint16_t);
+uint16_t ETH_GetStatusVectorByteCount(void);
+void ETH_SetStatusVectorByteCount(uint16_t);
+
+void ETH_ResetByteCount(void);
+uint16_t ETH_GetByteCount(void);
+
+uint16_t ETH_ReadSavedWRPT(void);
+void ETH_SaveWRPT(void);
+void ETH_SetRxByteCount(uint16_t count);
+uint16_t ETH_GetRxByteCount(void);
+
+_Bool ETH_CheckLinkUp(void);
+
+void ETH_TxReset(void);
+void ETH_MoveBackReadPtr(uint16_t offset);
+# 50 "main.c" 2
+
+# 1 "./mcc_generated_files/TCPIPLibrary/tftp_handler_table.h" 1
+# 58 "./mcc_generated_files/TCPIPLibrary/tftp_handler_table.h"
+uint16_t store_type = 0;
+
+
+
+
+typedef uint8_t (*TFTP_receive_function_ptr)(uint32_t , char *, uint16_t);
+
+typedef struct
+{
+    uint16_t storeNumber;
+    TFTP_receive_function_ptr TFTP_CallBack;
+} store_handler_t;
+
+const store_handler_t TFTP_callBackTable[] =
+{
+};
+# 51 "main.c" 2
+
 
 
 
@@ -7593,32 +7719,10 @@ void main(void)
 
 
 
-    TRISBbits.RB4 = 0;
-    TRISCbits.RC6 = 0;
-    TRISCbits.RC7 = 1;
-    TRISCbits.RC3 = 1;
-    TRISCbits.RC4 = 1;
-    TRISEbits.RE0 = 1;
-    TRISEbits.RE1 = 1;
 
-    ADCON1bits.PCFG = 0b1111;
-
-
-
-    BAUDCON1bits.BRG16 = 1;
-    TXSTA1bits.BRGH = 1;
-    SPBRG = 53;
-    RCSTAbits.SPEN = 1;
-    TXSTAbits.TXEN= 1;
-    RCSTAbits.CREN = 1;
-
-
-    SSP1CON1bits.SSPEN = 0;
-    SSP1CON1bits.SSPM = 0b1000;
-    SSPADD = 62;
-    SSP1CON1bits.SSPEN = 1;
 
     DIO_Init();
+
 
 
     while (1)

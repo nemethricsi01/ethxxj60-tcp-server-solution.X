@@ -11,6 +11,219 @@ Version 4.0 HI-TECH Software Intermediate Code
 "95 mcc_generated_files/tmr1.h
 [; ;mcc_generated_files/tmr1.h: 95: void TMR1_Initialize(void);
 [v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
+"4517 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4517:     struct {
+[s S165 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S165 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"4527
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4527:     struct {
+[s S166 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S166 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"4516
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4516: typedef union {
+[u S164 `S165 1 `S166 1 ]
+[n S164 . . . ]
+"4538
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4538: extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
+[v _TRISBbits `VS164 ~T0 @X0 0 e@3987 ]
+"4739
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4739:     struct {
+[s S171 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S171 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"4749
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4749:     struct {
+[s S172 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S172 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"4738
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4738: typedef union {
+[u S170 `S171 1 `S172 1 ]
+[n S170 . . . ]
+"4760
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 4760: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
+[v _TRISCbits `VS170 ~T0 @X0 0 e@3988 ]
+"5063
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 5063:     struct {
+[s S183 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S183 . TRISE0 TRISE1 TRISE2 TRISE3 TRISE4 TRISE5 ]
+"5071
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 5071:     struct {
+[s S184 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S184 . RE0 RE1 RE2 RE3 RE4 RE5 ]
+"5062
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 5062: typedef union {
+[u S182 `S183 1 `S184 1 ]
+[n S182 . . . ]
+"5080
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 5080: extern volatile TRISEbits_t TRISEbits __attribute__((address(0xF96)));
+[v _TRISEbits `VS182 ~T0 @X0 0 e@3990 ]
+"7977
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 7977:     struct {
+[s S309 :4 `uc 1 :2 `uc 1 ]
+[n S309 . PCFG VCFG ]
+"7981
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 7981:     struct {
+[s S310 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S310 . PCFG0 PCFG1 PCFG2 PCFG3 VCFG0 VCFG1 ]
+"7989
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 7989:     struct {
+[s S311 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S311 . . CHSN3 VCFG01 VCFG11 ]
+"7976
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 7976: typedef union {
+[u S308 `S309 1 `S310 1 `S311 1 ]
+[n S308 . . . . ]
+"7996
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 7996: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0xFC1)));
+[v _ADCON1bits `VS308 ~T0 @X0 0 e@4033 ]
+"2143
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2143:     struct {
+[s S67 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S67 . ABDEN WUE . BRG16 TXCKP RXDTP RCIDL ABDOVF ]
+"2153
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2153:     struct {
+[s S68 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S68 . . SCKP . RCMT ]
+"2159
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2159:     struct {
+[s S69 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S69 . ABDEN1 WUE1 . BRG161 CKTXP DTRXP RCIDL1 ABDOVF1 ]
+"2169
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2169:     struct {
+[s S70 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S70 . . SCKP1 DTRXP1 RCMT1 ]
+"2175
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2175:     struct {
+[s S71 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S71 . . TXCKP1 RXDTP1 ]
+"2180
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2180:     struct {
+[s S72 :5 `uc 1 :1 `uc 1 ]
+[n S72 . . RXCKP ]
+"2184
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2184:     struct {
+[s S73 :1 `uc 1 :1 `uc 1 ]
+[n S73 . . W4E ]
+"2142
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2142: typedef union {
+[u S66 `S67 1 `S68 1 `S69 1 `S70 1 `S71 1 `S72 1 `S73 1 ]
+[n S66 . . . . . . . . ]
+"2189
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 2189: extern volatile BAUDCON1bits_t BAUDCON1bits __attribute__((address(0xF7E)));
+[v _BAUDCON1bits `VS66 ~T0 @X0 0 e@3966 ]
+"6505
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6505:     struct {
+[s S251 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S251 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"6515
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6515:     struct {
+[s S252 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S252 . TXD8 . TX8_9 ]
+"6520
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6520:     struct {
+[s S253 :6 `uc 1 :1 `uc 1 ]
+[n S253 . . NOT_TX8 ]
+"6524
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6524:     struct {
+[s S254 :6 `uc 1 :1 `uc 1 ]
+[n S254 . . nTX8 ]
+"6528
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6528:     struct {
+[s S255 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S255 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+"6504
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6504: typedef union {
+[u S250 `S251 1 `S252 1 `S253 1 `S254 1 `S255 1 ]
+[n S250 . . . . . . ]
+"6539
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6539: extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0xFAC)));
+[v _TXSTA1bits `VS250 ~T0 @X0 0 e@4012 ]
+"6811
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6811: extern volatile unsigned char SPBRG __attribute__((address(0xFAF)));
+[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
+"6337
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6337:     struct {
+[s S243 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S243 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"6347
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6347:     struct {
+[s S244 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S244 . RCD8 . RC9 ]
+"6352
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6352:     struct {
+[s S245 :6 `uc 1 :1 `uc 1 ]
+[n S245 . . NOT_RC8 ]
+"6356
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6356:     struct {
+[s S246 :6 `uc 1 :1 `uc 1 ]
+[n S246 . . nRC8 ]
+"6360
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6360:     struct {
+[s S247 :6 `uc 1 :1 `uc 1 ]
+[n S247 . . RC8_9 ]
+"6364
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6364:     struct {
+[s S248 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S248 . RX9D1 OERR1 FERR1 ADDEN1 CREN1 SREN1 RX91 SPEN1 ]
+"6374
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6374:     struct {
+[s S249 :5 `uc 1 :1 `uc 1 ]
+[n S249 . . SRENA ]
+"6336
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6336: typedef union {
+[u S242 `S243 1 `S244 1 `S245 1 `S246 1 `S247 1 `S248 1 `S249 1 ]
+[n S242 . . . . . . . . ]
+"6379
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6379: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
+[v _RCSTAbits `VS242 ~T0 @X0 0 e@4011 ]
+"6643
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6643:     struct {
+[s S257 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S257 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"6653
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6653:     struct {
+[s S258 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S258 . TXD8 . TX8_9 ]
+"6658
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6658:     struct {
+[s S259 :6 `uc 1 :1 `uc 1 ]
+[n S259 . . NOT_TX8 ]
+"6662
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6662:     struct {
+[s S260 :6 `uc 1 :1 `uc 1 ]
+[n S260 . . nTX8 ]
+"6666
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6666:     struct {
+[s S261 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S261 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+"6642
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6642: typedef union {
+[u S256 `S257 1 `S258 1 `S259 1 `S260 1 `S261 1 ]
+[n S256 . . . . . . ]
+"6677
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 6677: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
+[v _TXSTAbits `VS256 ~T0 @X0 0 e@4012 ]
+"8586
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 8586:     struct {
+[s S334 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S334 . SSPM CKP SSPEN SSPOV WCOL ]
+"8593
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 8593:     struct {
+[s S335 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S335 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"8599
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 8599:     struct {
+[s S336 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S336 . SSPM01 SSPM11 SSPM21 SSPM31 CKP1 SSPEN1 SSPOV1 WCOL1 ]
+"8585
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 8585: typedef union {
+[u S333 `S334 1 `S335 1 `S336 1 ]
+[n S333 . . . . ]
+"8610
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 8610: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0xFC6)));
+[v _SSP1CON1bits `VS333 ~T0 @X0 0 e@4038 ]
+"9416
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f67j60.h: 9416: extern volatile unsigned char SSPADD __attribute__((address(0xFC8)));
+[v _SSPADD `Vuc ~T0 @X0 0 e@4040 ]
 "80 mcc_generated_files/TCPIPLibrary/network.h
 [; ;mcc_generated_files/TCPIPLibrary/network.h: 80: void Network_Init(void);
 [v _Network_Init `(v ~T0 @X0 0 ef ]
@@ -844,28 +1057,82 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56
 [; ;mcc_generated_files/mcc.c: 56:     TMR1_Initialize();
 [e ( _TMR1_Initialize ..  ]
-"57
-[; ;mcc_generated_files/mcc.c: 57:     Network_Init();
-[e ( _Network_Init ..  ]
 "58
-[; ;mcc_generated_files/mcc.c: 58: }
+[; ;mcc_generated_files/mcc.c: 58:     TRISBbits.RB4 = 0;
+[e = . . _TRISBbits 1 4 -> -> 0 `i `uc ]
+"59
+[; ;mcc_generated_files/mcc.c: 59:     TRISCbits.RC6 = 0;
+[e = . . _TRISCbits 1 6 -> -> 0 `i `uc ]
+"60
+[; ;mcc_generated_files/mcc.c: 60:     TRISCbits.RC7 = 1;
+[e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
+"61
+[; ;mcc_generated_files/mcc.c: 61:     TRISCbits.RC3 = 1;
+[e = . . _TRISCbits 1 3 -> -> 1 `i `uc ]
+"62
+[; ;mcc_generated_files/mcc.c: 62:     TRISCbits.RC4 = 1;
+[e = . . _TRISCbits 1 4 -> -> 1 `i `uc ]
+"63
+[; ;mcc_generated_files/mcc.c: 63:     TRISEbits.RE0 = 1;
+[e = . . _TRISEbits 1 0 -> -> 1 `i `uc ]
+"64
+[; ;mcc_generated_files/mcc.c: 64:     TRISEbits.RE1 = 1;
+[e = . . _TRISEbits 1 1 -> -> 1 `i `uc ]
+"66
+[; ;mcc_generated_files/mcc.c: 66:     ADCON1bits.PCFG = 0b1111;
+[e = . . _ADCON1bits 0 0 -> -> 15 `i `uc ]
+"70
+[; ;mcc_generated_files/mcc.c: 70:     BAUDCON1bits.BRG16 = 1;
+[e = . . _BAUDCON1bits 0 3 -> -> 1 `i `uc ]
+"71
+[; ;mcc_generated_files/mcc.c: 71:     TXSTA1bits.BRGH = 1;
+[e = . . _TXSTA1bits 0 2 -> -> 1 `i `uc ]
+"72
+[; ;mcc_generated_files/mcc.c: 72:     SPBRG = 53;
+[e = _SPBRG -> -> 53 `i `uc ]
+"73
+[; ;mcc_generated_files/mcc.c: 73:     RCSTAbits.SPEN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+"74
+[; ;mcc_generated_files/mcc.c: 74:     TXSTAbits.TXEN= 1;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+"75
+[; ;mcc_generated_files/mcc.c: 75:     RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"78
+[; ;mcc_generated_files/mcc.c: 78:     SSP1CON1bits.SSPEN = 0;
+[e = . . _SSP1CON1bits 0 2 -> -> 0 `i `uc ]
+"79
+[; ;mcc_generated_files/mcc.c: 79:     SSP1CON1bits.SSPM = 0b1000;
+[e = . . _SSP1CON1bits 0 0 -> -> 8 `i `uc ]
+"80
+[; ;mcc_generated_files/mcc.c: 80:     SSPADD = 62;
+[e = _SSPADD -> -> 62 `i `uc ]
+"81
+[; ;mcc_generated_files/mcc.c: 81:     SSP1CON1bits.SSPEN = 1;
+[e = . . _SSP1CON1bits 0 2 -> -> 1 `i `uc ]
+"83
+[; ;mcc_generated_files/mcc.c: 83:     Network_Init();
+[e ( _Network_Init ..  ]
+"84
+[; ;mcc_generated_files/mcc.c: 84: }
 [e :UE 455 ]
 }
-"60
-[; ;mcc_generated_files/mcc.c: 60: void OSCILLATOR_Initialize(void)
+"86
+[; ;mcc_generated_files/mcc.c: 86: void OSCILLATOR_Initialize(void)
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"61
-[; ;mcc_generated_files/mcc.c: 61: {
+"87
+[; ;mcc_generated_files/mcc.c: 87: {
 {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-"63
-[; ;mcc_generated_files/mcc.c: 63:     OSCCON = 0x02;
+"89
+[; ;mcc_generated_files/mcc.c: 89:     OSCCON = 0x02;
 [e = _OSCCON -> -> 2 `i `uc ]
-"65
-[; ;mcc_generated_files/mcc.c: 65:     OSCTUNE = 0x00;
+"91
+[; ;mcc_generated_files/mcc.c: 91:     OSCTUNE = 0x00;
 [e = _OSCTUNE -> -> 0 `i `uc ]
-"66
-[; ;mcc_generated_files/mcc.c: 66: }
+"92
+[; ;mcc_generated_files/mcc.c: 92: }
 [e :UE 456 ]
 }

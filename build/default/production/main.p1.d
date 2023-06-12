@@ -10,4 +10,6 @@ mcc_generated_files/TCPIPLibrary/tcpip_types.h  \
 app_files/tcp_server_demo.h  \
 app_files/i2c_eeprom.h  \
 app_files/UART.h  \
-app_files/DIO.h 
+app_files/DIO.h  \
+mcc_generated_files/TCPIPLibrary/physical_layer_interface.h  \
+mcc_generated_files/TCPIPLibrary/tftp_handler_table.h 

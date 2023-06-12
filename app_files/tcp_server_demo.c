@@ -112,7 +112,17 @@ void TCP_Demo_EchoServer(void) {
                             }
                             if (rxdataPort7[1] == 0x24) 
                             {
-                                
+                                txdataPort7[0] = 0x24;
+                                txdataPort7[1] = 0x18;
+                                uint8_t bytehigh,bytelow;
+                                bytelow     = rxdataPort7[2];
+                                bytehigh    = rxdataPort7[3];
+                                uint32_t length = bytehigh<<8;
+                                length |= bytelow;
+                                for(int i = 0;i<length;i++)
+                                {
+                                    txdataPort7[i+2] = rx_buffer[rx]
+                                }
                             }
                             if (rxdataPort7[1] == 0x3c) //get rec buff size
                             {

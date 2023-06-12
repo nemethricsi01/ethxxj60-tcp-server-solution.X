@@ -76,7 +76,10 @@ uint8_t i2c_eeprom_read(uint8_t devaddr, uint8_t memaddr,uint8_t *data)
     }
     SSP1CON2bits.RCEN = 1;
     PIR1bits.SSP1IF = 0;
-    uint8_t temp = SSP1BUF;
+    while(SSP1CON2bits.RCEN  != 0);
+    static volatile uint8_t temp;
+    temp = SSP1BUF;
+    *data = temp;
     while(PIR1bits.SSP1IF != 1);
     PIR1bits.SSP1IF = 0;
     SSP1CON2bits.ACKDT = 1;

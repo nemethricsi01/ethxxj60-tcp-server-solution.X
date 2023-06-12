@@ -54,6 +54,32 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     TMR1_Initialize();
+    
+    TRISBbits.RB4 = 0;
+    TRISCbits.RC6 = 0;//TX
+    TRISCbits.RC7 = 1;//RX
+    TRISCbits.RC3 = 1;//sck
+    TRISCbits.RC4 = 1;//sdi
+    TRISEbits.RE0 = 1;
+    TRISEbits.RE1 = 1;
+    
+    ADCON1bits.PCFG = 0b1111;//all analog DIO ports need to be set to digital in order to be able to read the digitally
+    //setup for uart
+
+    //brgh = 1  brg16 = 1 
+    BAUDCON1bits.BRG16 = 1;
+    TXSTA1bits.BRGH = 1;
+    SPBRG = 53;//115200bps
+    RCSTAbits.SPEN = 1;
+    TXSTAbits.TXEN= 1;
+    RCSTAbits.CREN = 1;
+    
+    //I2C SETUP //TODO move this to the eeprom file
+    SSP1CON1bits.SSPEN = 0;
+    SSP1CON1bits.SSPM = 0b1000;//master mode clk is: fosc/(4*(sspadd+1))
+    SSPADD = 62;//400khz
+    SSP1CON1bits.SSPEN = 1;
+    
     Network_Init();
 }
 
