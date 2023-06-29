@@ -7146,7 +7146,7 @@ uint8_t uart_pollforreceive(void)
     {
         rx_buffer[rx_buffptr] = RCREG1;
         rx_buffptr++;
-        PIR1bits.RCIF == 0;
+        PIR1bits.RCIF = 0;
         if(rx_buffptr >= 100)
         {
             return 11;

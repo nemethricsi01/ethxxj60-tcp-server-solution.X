@@ -1,0 +1,666 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F1005 `(uc ~T0 @X0 0 tf3`ul`*uc`us ]
+"66 mcc_generated_files/TCPIPLibrary/tftp_handler_table.h
+[; ;mcc_generated_files/TCPIPLibrary/tftp_handler_table.h: 66: {
+[s S27 `us 1 `*F1005 1 ]
+[n S27 . storeNumber TFTP_CallBack ]
+"76 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 76:     struct { uint8_t byte1,byte2,byte3,byte4,byte5,byte6; } s;
+[s S31 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S31 . byte1 byte2 byte3 byte4 byte5 byte6 ]
+"74
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 74: {
+[u S30 `uc -> 6 `i `S31 1 ]
+[n S30 . mac_array s ]
+"68 mcc_generated_files/TCPIPLibrary/tftp.h
+[; ;mcc_generated_files/TCPIPLibrary/tftp.h: 68: {
+[s S26 `ul 1 `uc -> 5 `i `uc -> 32 `i ]
+[n S26 . tftp_server_address tftp_block_size tftp_filename ]
+"34 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 34: char *strncpy (char *restrict, const char *restrict, size_t);
+[v _strncpy `(*uc ~T0 @X0 0 ef3`*uc`*Cuc`ui ]
+"54
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"83 mcc_generated_files/TCPIPLibrary/tftp.c
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 83: error_msg TFTP_Read_Write_Request(uint8_t opcode)
+[c E919 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 .. ]
+[n E919 . ERROR SUCCESS LINK_NOT_FOUND BUFFER_BUSY TX_LOGIC_NOT_IDLE MAC_NOT_FOUND IP_WRONG_VERSION IPV4_CHECKSUM_FAILS DEST_IP_NOT_MATCHED ICMP_CHECKSUM_FAILS UDP_CHECKSUM_FAILS TCP_CHECKSUM_FAILS DMA_TIMEOUT PORT_NOT_AVAILABLE ARP_IP_NOT_MATCHED EAPoL_PACKET_FAILURE INCORRECT_IPV4_HLEN IPV4_NO_OPTIONS TX_QUEUED IPV6_CHECKSUM_FAILS IPV6_LOCAL_ADDR_RESOLVE IPV6_LOCAL_ADDR_INVALID NO_GATEWAY ADDRESS_RESOLUTION GLOBAL_DESTINATION ARP_WRONG_HARDWARE_ADDR_TYPE ARP_WRONG_PROTOCOL_TYPE ARP_WRONG_HARDWARE_ADDR_LEN ARP_WRONG_PROTOCOL_LEN  ]
+"94
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 94:     if(opcode == ((tftp_opcode)TFTP_READ_REQUEST || opcode == (tftp_opcode)TFTP_WRITE_REQUEST))
+[c E966 1 2 3 4 5 6 .. ]
+[n E966 . TFTP_READ_REQUEST TFTP_WRITE_REQUEST TFTP_DATA TFTP_ACK TFTP_ERROR TFTP_OPTACK  ]
+"82 mcc_generated_files/TCPIPLibrary/udpv4.h
+[; ;mcc_generated_files/TCPIPLibrary/udpv4.h: 82: error_msg UDP_Start(uint32_t destIP, uint16_t srcPort, uint16_t dstPort);
+[v _UDP_Start `(E919 ~T0 @X0 0 ef3`ul`us`us ]
+"118 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 118: void ETH_Write16(uint16_t);
+[v _ETH_Write16 `(v ~T0 @X0 0 ef1`us ]
+"116
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 116: uint16_t ETH_WriteBlock(const char *, uint16_t);
+[v _ETH_WriteBlock `(us ~T0 @X0 0 ef2`*Cuc`us ]
+"117
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 117: void ETH_Write8(uint8_t);
+[v _ETH_Write8 `(v ~T0 @X0 0 ef1`uc ]
+"83 mcc_generated_files/TCPIPLibrary/udpv4.h
+[; ;mcc_generated_files/TCPIPLibrary/udpv4.h: 83: error_msg UDP_Send(void);
+[v _UDP_Send `(E919 ~T0 @X0 0 ef ]
+"111 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"59 mcc_generated_files/TCPIPLibrary/udpv4.h
+[; ;mcc_generated_files/TCPIPLibrary/udpv4.h: 59: extern uint16_t destPort;
+[v _destPort `us ~T0 @X0 0 e ]
+"23 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdlib.h: 23: int atoi (const char *);
+[v _atoi `(i ~T0 @X0 0 ef1`*Cuc ]
+"106 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 106: uint16_t ETH_Read16(void);
+[v _ETH_Read16 `(us ~T0 @X0 0 ef ]
+"153 mcc_generated_files/TCPIPLibrary/tftp.c
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 153:         if(opcode == tftp_optack)
+[c E958 1 2 3 4 5 6 .. ]
+[n E958 . tftp_read tftp_write tftp_data tftp_ack tftp_error tftp_optack  ]
+"29 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"104 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 104: uint16_t ETH_ReadBlock(void*, uint16_t);
+[v _ETH_ReadBlock `(us ~T0 @X0 0 ef2`*v`us ]
+"129 mcc_generated_files/TCPIPLibrary/tftp.h
+[; ;mcc_generated_files/TCPIPLibrary/tftp.h: 129: uint8_t Process_TFTP_Data(uint32_t address, char *data, uint16_t length);
+[v _Process_TFTP_Data `(uc ~T0 @X0 0 ef3`ul`*uc`us ]
+"58 mcc_generated_files/TCPIPLibrary/tftp_handler_table.h
+[; ;mcc_generated_files/TCPIPLibrary/tftp_handler_table.h: 58: uint16_t store_type = 0;
+[v _store_type `us ~T0 @X0 1 e ]
+[i _store_type
+-> -> 0 `i `us
+]
+"71
+[; ;mcc_generated_files/TCPIPLibrary/tftp_handler_table.h: 71: const store_handler_t TFTP_callBackTable[] =
+[v _TFTP_callBackTable `CS27 ~T0 @X0 -> -> 0 `i `ux e ]
+[i _TFTP_callBackTable
+:U ..
+..
+]
+"86 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 86: extern const mac48Address_t broadcastMAC = {0xff,0xff,0xff,0xff,0xff,0xff};
+[v _broadcastMAC `CS30 ~T0 @X0 1 e ]
+[i _broadcastMAC
+:U 0
+:U ..
+:U ..
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+..
+..
+..
+]
+"63 mcc_generated_files/TCPIPLibrary/tftp.c
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 63: const char *tftp_modes[] = {"netascii", "octet", "mail"};
+[v _tftp_modes `*Cuc ~T0 @X0 -> 3 `i e ]
+[i _tftp_modes
+:U ..
+:s 1C
+:s 2C
+:s 3C
+..
+]
+"64
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 64: const char tftp_option[] = "blksize";
+[v _tftp_option `Cuc ~T0 @X0 -> 8 `i e ]
+[i _tftp_option
+:U ..
+-> 98 `c
+-> 108 `c
+-> 107 `c
+-> 115 `c
+-> 105 `c
+-> 122 `c
+-> 101 `c
+-> 0 `c
+..
+]
+"66
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 66: tftp_t tftp_msg;
+[v _tftp_msg `S26 ~T0 @X0 1 e ]
+"67
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 67: volatile _Bool last_block = 0;
+[v _last_block `Va ~T0 @X0 1 e ]
+[i _last_block
+-> -> 0 `i `a
+]
+"69
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 69: static uint16_t current_block = 0x0000, prev_block = 0x0000, next_block = 0x0000;
+[v _current_block `us ~T0 @X0 1 s ]
+[i _current_block
+-> -> 0 `i `us
+]
+[v _prev_block `us ~T0 @X0 1 s ]
+[i _prev_block
+-> -> 0 `i `us
+]
+[v _next_block `us ~T0 @X0 1 s ]
+[i _next_block
+-> -> 0 `i `us
+]
+"70
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 70: uint32_t tftp_last_address = 0x00020000;
+[v _tftp_last_address `ul ~T0 @X0 1 e ]
+[i _tftp_last_address
+-> -> 131072 `l `ul
+]
+"74
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 74: void TFTP_Configure(uint32_t tftp_server_address, char *tftp_filename, char *tftp_block_size)
+[v _TFTP_Configure `(v ~T0 @X0 1 ef3`ul`*uc`*uc ]
+"75
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 75: {
+{
+[e :U _TFTP_Configure ]
+"74
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 74: void TFTP_Configure(uint32_t tftp_server_address, char *tftp_filename, char *tftp_block_size)
+[v _tftp_server_address `ul ~T0 @X0 1 r1 ]
+[v _tftp_filename `*uc ~T0 @X0 1 r2 ]
+[v _tftp_block_size `*uc ~T0 @X0 1 r3 ]
+"75
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 75: {
+[f ]
+"76
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 76:     tftp_msg.tftp_server_address = tftp_server_address;
+[e = . _tftp_msg 0 _tftp_server_address ]
+"77
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 77:     strncpy(tftp_msg.tftp_filename,tftp_filename,strlen(tftp_filename));
+[e ( _strncpy (3 , , &U . _tftp_msg 2 -> _tftp_filename `*Cuc ( _strlen (1 -> _tftp_filename `*Cuc ]
+"78
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 78:     strncpy(tftp_msg.tftp_block_size,tftp_block_size,strlen(tftp_block_size));
+[e ( _strncpy (3 , , &U . _tftp_msg 1 -> _tftp_block_size `*Cuc ( _strlen (1 -> _tftp_block_size `*Cuc ]
+"79
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 79: }
+[e :UE 34 ]
+}
+"83
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 83: error_msg TFTP_Read_Write_Request(uint8_t opcode)
+[v _TFTP_Read_Write_Request `(E919 ~T0 @X0 1 ef1`uc ]
+"84
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 84: {
+{
+[e :U _TFTP_Read_Write_Request ]
+"83
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 83: error_msg TFTP_Read_Write_Request(uint8_t opcode)
+[v _opcode `uc ~T0 @X0 1 r1 ]
+"84
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 84: {
+[f ]
+"85
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 85:     uint8_t len_tftp_fn, len_tftp_mode, len_tftp_option, len_tftp_block_size;
+[v _len_tftp_fn `uc ~T0 @X0 1 a ]
+[v _len_tftp_mode `uc ~T0 @X0 1 a ]
+[v _len_tftp_option `uc ~T0 @X0 1 a ]
+[v _len_tftp_block_size `uc ~T0 @X0 1 a ]
+"86
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 86:     error_msg started = ERROR;
+[v _started `E919 ~T0 @X0 1 a ]
+[e = _started . `E919 0 ]
+"87
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 87:     uint32_t tftp_server_address = tftp_msg.tftp_server_address;
+[v _tftp_server_address `ul ~T0 @X0 1 a ]
+[e = _tftp_server_address . _tftp_msg 0 ]
+"89
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 89:     len_tftp_fn = strlen(tftp_msg.tftp_filename);
+[e = _len_tftp_fn -> ( _strlen (1 -> &U . _tftp_msg 2 `*Cuc `uc ]
+"90
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 90:     len_tftp_mode = strlen(tftp_modes[1]);
+[e = _len_tftp_mode -> ( _strlen (1 *U + &U _tftp_modes * -> -> -> 1 `i `ui `ux -> -> # *U &U _tftp_modes `ui `ux `uc ]
+"91
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 91:     len_tftp_option = strlen(tftp_option);
+[e = _len_tftp_option -> ( _strlen (1 &U _tftp_option `uc ]
+"92
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 92:     len_tftp_block_size = strlen(tftp_msg.tftp_block_size);
+[e = _len_tftp_block_size -> ( _strlen (1 -> &U . _tftp_msg 1 `*Cuc `uc ]
+"94
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 94:     if(opcode == ((tftp_opcode)TFTP_READ_REQUEST || opcode == (tftp_opcode)TFTP_WRITE_REQUEST))
+[e $ ! == -> _opcode `i -> || != -> -> . `E966 0 `E966 `ui -> -> 0 `i `ui == -> _opcode `ui -> -> . `E966 1 `E966 `ui `i 36  ]
+"95
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 95:     {
+{
+"96
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 96:         started = UDP_Start(tftp_server_address,65531,69);
+[e = _started ( _UDP_Start (3 , , _tftp_server_address -> -> 65531 `l `us -> -> 69 `i `us ]
+"98
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 98:         if(started)
+[e $ ! != -> _started `ui -> -> 0 `i `ui 37  ]
+"99
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 99:         {
+{
+"100
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 100:             ETH_Write16(opcode);
+[e ( _ETH_Write16 (1 -> _opcode `us ]
+"101
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 101:             ETH_WriteBlock((char *)tftp_msg.tftp_filename,len_tftp_fn);
+[e ( _ETH_WriteBlock (2 , -> &U . _tftp_msg 2 `*Cuc -> _len_tftp_fn `us ]
+"102
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 102:             ETH_Write8(0x00);
+[e ( _ETH_Write8 (1 -> -> 0 `i `uc ]
+"103
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 103:             ETH_WriteBlock((char *)tftp_modes[1],len_tftp_mode);
+[e ( _ETH_WriteBlock (2 , -> -> *U + &U _tftp_modes * -> -> -> 1 `i `ui `ux -> -> # *U &U _tftp_modes `ui `ux `*uc `*Cuc -> _len_tftp_mode `us ]
+"104
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 104:             ETH_Write8(0x00);
+[e ( _ETH_Write8 (1 -> -> 0 `i `uc ]
+"105
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 105:             ETH_WriteBlock((char *)tftp_option,len_tftp_option);
+[e ( _ETH_WriteBlock (2 , -> -> &U _tftp_option `*uc `*Cuc -> _len_tftp_option `us ]
+"106
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 106:             ETH_Write8(0x00);
+[e ( _ETH_Write8 (1 -> -> 0 `i `uc ]
+"107
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 107:             ETH_WriteBlock((char *)tftp_msg.tftp_block_size,len_tftp_block_size);
+[e ( _ETH_WriteBlock (2 , -> &U . _tftp_msg 1 `*Cuc -> _len_tftp_block_size `us ]
+"108
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 108:             ETH_Write8(0x00);
+[e ( _ETH_Write8 (1 -> -> 0 `i `uc ]
+"110
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 110:             UDP_Send();
+[e ( _UDP_Send ..  ]
+"111
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 111:         }
+}
+[e $U 38  ]
+"112
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 112:         else printf("UDP_Start Failed\r\n");
+[e :U 37 ]
+[e ( _printf :s 4C ]
+[e :U 38 ]
+"113
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 113:     }
+}
+[e $U 39  ]
+"114
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 114:     else printf("Failed Opcode = %d \r\n",opcode);
+[e :U 36 ]
+[e ( _printf , (. :s 5C -> _opcode `i ]
+[e :U 39 ]
+"116
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 116:     return started;
+[e ) _started ]
+[e $UE 35  ]
+"117
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 117: }
+[e :UE 35 ]
+}
+"120
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 120: void TFTP_Ack(uint8_t opcode)
+[v _TFTP_Ack `(v ~T0 @X0 1 ef1`uc ]
+"121
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 121: {
+{
+[e :U _TFTP_Ack ]
+"120
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 120: void TFTP_Ack(uint8_t opcode)
+[v _opcode `uc ~T0 @X0 1 r1 ]
+"121
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 121: {
+[f ]
+"122
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 122:     _Bool started = 0;
+[v _started `a ~T0 @X0 1 a ]
+[e = _started -> -> 0 `i `a ]
+"123
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 123:     uint16_t dest_port;
+[v _dest_port `us ~T0 @X0 1 a ]
+"124
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 124:     uint32_t tftp_server_address = tftp_msg.tftp_server_address;
+[v _tftp_server_address `ul ~T0 @X0 1 a ]
+[e = _tftp_server_address . _tftp_msg 0 ]
+"126
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 126:     if(opcode == TFTP_ACK)
+[e $ ! == -> _opcode `i -> . `E966 3 `i 41  ]
+"127
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 127:     {
+{
+"128
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 128:         dest_port = (destPort);
+[e = _dest_port _destPort ]
+"129
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 129:         started = (_Bool)UDP_Start(tftp_server_address,65531,dest_port);
+[e = _started -> ( _UDP_Start (3 , , _tftp_server_address -> -> 65531 `l `us _dest_port `a ]
+"130
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 130:         if(started)
+[e $ ! != -> _started `i -> 0 `i 42  ]
+"131
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 131:         {
+{
+"132
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 132:             ETH_Write16(opcode);
+[e ( _ETH_Write16 (1 -> _opcode `us ]
+"133
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 133:             ETH_Write16(current_block);
+[e ( _ETH_Write16 (1 _current_block ]
+"135
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 135:             UDP_Send();
+[e ( _UDP_Send ..  ]
+"136
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 136:         }
+}
+[e :U 42 ]
+"137
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 137:     }
+}
+[e :U 41 ]
+"138
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 138: }
+[e :UE 40 ]
+}
+"140
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 140: void TFTP_Handler(int16_t length)
+[v _TFTP_Handler `(v ~T0 @X0 1 ef1`s ]
+"141
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 141: {
+{
+[e :U _TFTP_Handler ]
+"140
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 140: void TFTP_Handler(int16_t length)
+[v _length `s ~T0 @X0 1 r1 ]
+"141
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 141: {
+[f ]
+"142
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 142:     uint8_t opcode;
+[v _opcode `uc ~T0 @X0 1 a ]
+"143
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 143:     char data[100];
+[v _data `uc ~T0 @X0 -> 100 `i a ]
+"144
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 144:     char recv_buffer[100];
+[v _recv_buffer `uc ~T0 @X0 -> 100 `i a ]
+"145
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 145:     uint16_t block_size;
+[v _block_size `us ~T0 @X0 1 a ]
+"146
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 146:     int v;
+[v _v `i ~T0 @X0 1 a ]
+"148
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 148:     block_size =(uint16_t)atoi((const char *)tftp_msg.tftp_block_size);
+[e = _block_size -> ( _atoi (1 -> &U . _tftp_msg 1 `*Cuc `us ]
+"149
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 149:     if(length > (2 + 2))
+[e $ ! > -> _length `i + -> 2 `i -> 2 `i 44  ]
+"150
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 150:     {
+{
+"151
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 151:         opcode = ETH_Read16();
+[e = _opcode -> ( _ETH_Read16 ..  `uc ]
+"152
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 152:         current_block = ETH_Read16();
+[e = _current_block ( _ETH_Read16 ..  ]
+"153
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 153:         if(opcode == tftp_optack)
+[e $ ! == -> _opcode `i -> . `E958 5 `i 45  ]
+"154
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 154:         {
+{
+"155
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 155:             current_block = 0;
+[e = _current_block -> -> 0 `i `us ]
+"156
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 156:             TFTP_Ack(TFTP_ACK);
+[e ( _TFTP_Ack (1 -> . `E966 3 `uc ]
+"157
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 157:         }
+}
+[e :U 45 ]
+"158
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 158:         if(current_block == prev_block+1)
+[e $ ! == -> _current_block `ui + -> _prev_block `ui -> -> 1 `i `ui 46  ]
+"159
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 159:         {
+{
+"160
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 160:             next_block = current_block + 1;
+[e = _next_block -> + -> _current_block `ui -> -> 1 `i `ui `us ]
+"161
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 161:             length = length - 4;
+[e = _length -> - -> _length `i -> 4 `i `s ]
+"162
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 162:             if(((uint16_t)length <block_size) && (opcode == TFTP_DATA))
+[e $ ! && < -> -> _length `us `ui -> _block_size `ui == -> _opcode `i -> . `E966 2 `i 47  ]
+"163
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 163:             {
+{
+"164
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 164:                 last_block = 1;
+[e = _last_block -> -> 1 `i `a ]
+"165
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 165:             }
+}
+[e :U 47 ]
+"166
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 166:             switch(opcode)
+[e $U 49  ]
+"167
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 167:             {
+{
+"168
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 168:                 case tftp_read:
+[e :U 50 ]
+"169
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 169:                     break;
+[e $U 48  ]
+"170
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 170:                 case tftp_write:
+[e :U 51 ]
+"171
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 171:                     current_block = 0;
+[e = _current_block -> -> 0 `i `us ]
+"172
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 172:                     TFTP_Ack(TFTP_ACK);
+[e ( _TFTP_Ack (1 -> . `E966 3 `uc ]
+"173
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 173:                     break;
+[e $U 48  ]
+"174
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 174:                 case tftp_data:
+[e :U 52 ]
+"176
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 176:                         while(length > 0)
+[e $U 53  ]
+[e :U 54 ]
+"177
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 177:                         {
+{
+"178
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 178:                             v = (length>100)?100:length;
+[e = _v ? > -> _length `i -> 100 `i : -> 100 `i -> _length `i ]
+"179
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 179:                             memset(data,0,sizeof(data));
+[e ( _memset (3 , , -> &U _data `*v -> 0 `i -> # _data `ui ]
+"180
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 180:                             memset(recv_buffer,0,sizeof(recv_buffer));
+[e ( _memset (3 , , -> &U _recv_buffer `*v -> 0 `i -> # _recv_buffer `ui ]
+"181
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 181:                             ETH_ReadBlock(data,(uint16_t)v);
+[e ( _ETH_ReadBlock (2 , -> &U _data `*v -> _v `us ]
+"182
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 182:                             Process_TFTP_Data(tftp_last_address, data, (uint16_t)v);
+[e ( _Process_TFTP_Data (3 , , _tftp_last_address &U _data -> _v `us ]
+"183
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 183:                             tftp_last_address = tftp_last_address + (uint16_t)v;
+[e = _tftp_last_address + _tftp_last_address -> -> _v `us `ul ]
+"184
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 184:                             length -= v;
+[e =- _length -> _v `s ]
+"185
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 185:                         }
+}
+[e :U 53 ]
+"176
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 176:                         while(length > 0)
+[e $ > -> _length `i -> 0 `i 54  ]
+[e :U 55 ]
+"186
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 186:                         TFTP_Ack(TFTP_ACK);
+[e ( _TFTP_Ack (1 -> . `E966 3 `uc ]
+"187
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 187:                     prev_block = current_block;
+[e = _prev_block _current_block ]
+"188
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 188:                     break;
+[e $U 48  ]
+"189
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 189:                 case tftp_ack:
+[e :U 56 ]
+"190
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 190:                     break;
+[e $U 48  ]
+"191
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 191:                 case tftp_error:
+[e :U 57 ]
+"192
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 192:                     length = 0;
+[e = _length -> -> 0 `i `s ]
+"193
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 193:                     break;
+[e $U 48  ]
+"195
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 195:             }
+}
+[e $U 48  ]
+[e :U 49 ]
+[e [\ -> _opcode `i , $ . `E958 0 50
+ , $ . `E958 1 51
+ , $ . `E958 2 52
+ , $ . `E958 3 56
+ , $ . `E958 4 57
+ 48 ]
+[e :U 48 ]
+"196
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 196:         }
+}
+[e $U 58  ]
+"197
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 197:         else if(current_block < prev_block)
+[e :U 46 ]
+[e $ ! < -> _current_block `ui -> _prev_block `ui 59  ]
+"198
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 198:         {
+{
+"199
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 199:             TFTP_Ack(TFTP_ACK);
+[e ( _TFTP_Ack (1 -> . `E966 3 `uc ]
+"200
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 200:             length=0;
+[e = _length -> -> 0 `i `s ]
+"202
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 202:         }
+}
+[e $U 60  ]
+"203
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 203:         else if(current_block > prev_block+1)
+[e :U 59 ]
+[e $ ! > -> _current_block `ui + -> _prev_block `ui -> -> 1 `i `ui 61  ]
+"204
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 204:         {
+{
+"205
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 205:             length=0;
+[e = _length -> -> 0 `i `s ]
+"206
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 206:         }
+}
+[e :U 61 ]
+[e :U 60 ]
+[e :U 58 ]
+"207
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 207:     }
+}
+[e :U 44 ]
+"208
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 208: }
+[e :UE 43 ]
+}
+"225
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 225: uint8_t Process_TFTP_Data(uint32_t address, char *data, uint16_t length)
+[v _Process_TFTP_Data `(uc ~T0 @X0 1 ef3`ul`*uc`us ]
+"226
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 226: {
+{
+[e :U _Process_TFTP_Data ]
+"225
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 225: uint8_t Process_TFTP_Data(uint32_t address, char *data, uint16_t length)
+[v _address `ul ~T0 @X0 1 r1 ]
+[v _data `*uc ~T0 @X0 1 r2 ]
+[v _length `us ~T0 @X0 1 r3 ]
+"226
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 226: {
+[f ]
+"227
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 227:     const store_handler_t *hptr;
+[v _hptr `*CS27 ~T0 @X0 1 a ]
+"229
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 229:     hptr = TFTP_callBackTable;
+[e = _hptr &U _TFTP_callBackTable ]
+"230
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 230:     for(uint8_t i=0; i<(sizeof(TFTP_callBackTable)/sizeof(*TFTP_callBackTable)); i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui / -> # _TFTP_callBackTable `ui -> # *U &U _TFTP_callBackTable `ui 63  ]
+[e $U 64  ]
+[e :U 63 ]
+"231
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 231:     {
+{
+"232
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 232:         if(hptr)
+[e $ ! != _hptr -> -> 0 `i `*CS27 66  ]
+"233
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 233:         {
+{
+"234
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 234:             if(hptr->storeNumber == store_type)
+[e $ ! == -> . *U _hptr 0 `ui -> _store_type `ui 67  ]
+"235
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 235:             {
+{
+"236
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 236:                 hptr->TFTP_CallBack(address, data, length);
+[e ( *U . *U _hptr 1 (3 , , _address _data _length ]
+"237
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 237:                 break;
+[e $U 64  ]
+"238
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 238:             }
+}
+[e :U 67 ]
+"239
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 239:         }
+}
+[e :U 66 ]
+"240
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 240:         hptr++;
+[e ++ _hptr * -> -> 1 `i `x -> -> # *U _hptr `i `x ]
+"241
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 241:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui / -> # _TFTP_callBackTable `ui -> # *U &U _TFTP_callBackTable `ui 63  ]
+[e :U 64 ]
+}
+"243
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 243:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 62  ]
+"244
+[; ;mcc_generated_files/TCPIPLibrary/tftp.c: 244: }
+[e :UE 62 ]
+}
+[p f _printf 8388736 ]
+[a 2C 111 99 116 101 116 0 ]
+[a 3C 109 97 105 108 0 ]
+[a 1C 110 101 116 97 115 99 105 105 0 ]
+[a 4C 85 68 80 95 83 116 97 114 116 32 70 97 105 108 101 100 13 10 0 ]
+[a 5C 70 97 105 108 101 100 32 79 112 99 111 100 101 32 61 32 37 100 32 13 10 0 ]

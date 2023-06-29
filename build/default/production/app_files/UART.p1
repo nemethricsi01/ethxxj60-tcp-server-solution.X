@@ -1020,8 +1020,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;app_files/UART.c: 48:         rx_buffptr++;
 [e ++ _rx_buffptr -> -> 1 `i `uc ]
 "49
-[; ;app_files/UART.c: 49:         PIR1bits.RCIF == 0;
-[e == -> . . _PIR1bits 1 2 `i -> 0 `i ]
+[; ;app_files/UART.c: 49:         PIR1bits.RCIF = 0;
+[e = . . _PIR1bits 1 2 -> -> 0 `i `uc ]
 "50
 [; ;app_files/UART.c: 50:         if(rx_buffptr >= 100)
 [e $ ! >= -> _rx_buffptr `i -> 100 `i 454  ]

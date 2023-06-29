@@ -121,8 +121,10 @@ void TCP_Demo_EchoServer(void) {
                                 length |= bytelow;
                                 for(int i = 0;i<length;i++)
                                 {
-                                    txdataPort7[i+2] = rx_buffer[rx]
+                                    txdataPort7[i+2] = rx_buffer[i];
+                                    rx_buffptr--;
                                 }
+                                datalen = length+2;
                             }
                             if (rxdataPort7[1] == 0x3c) //get rec buff size
                             {

@@ -1,0 +1,747 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"76 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 76:     struct { uint8_t byte1,byte2,byte3,byte4,byte5,byte6; } s;
+[s S33 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S33 . byte1 byte2 byte3 byte4 byte5 byte6 ]
+"74
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 74: {
+[u S32 `uc -> 6 `i `S33 1 ]
+[n S32 . mac_array s ]
+"59 mcc_generated_files/TCPIPLibrary/dns_client.c
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 59: {
+[s S38 `*Cuc 1 `ul 1 `ul 1 `a 1 `o 1 ]
+[n S38 . dnsName ipAddress ttl isValid birthSecond ]
+"40 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdlib.h: 40: void srand (unsigned);
+[v _srand `(v ~T0 @X0 0 ef1`ui ]
+"80 mcc_generated_files/TCPIPLibrary/dns_client.c
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 80: static int generateSeed(void);
+[v _generateSeed `(i ~T0 @X0 0 sf ]
+"29 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"128 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 128: void ETH_GetMAC(uint8_t *);
+[v _ETH_GetMAC `(v ~T0 @X0 0 ef1`*uc ]
+"50 mcc_generated_files/TCPIPLibrary/lfsr.h
+[; ;mcc_generated_files/TCPIPLibrary/lfsr.h: 50: lfsr_t lfsrWithSeed(uint8_t lfsrSeed);
+[v _lfsrWithSeed `(uc ~T0 @X0 0 ef1`uc ]
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"107 mcc_generated_files/TCPIPLibrary/dns_client.c
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 107:     error_msg started;
+[c E1078 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 .. ]
+[n E1078 . ERROR SUCCESS LINK_NOT_FOUND BUFFER_BUSY TX_LOGIC_NOT_IDLE MAC_NOT_FOUND IP_WRONG_VERSION IPV4_CHECKSUM_FAILS DEST_IP_NOT_MATCHED ICMP_CHECKSUM_FAILS UDP_CHECKSUM_FAILS TCP_CHECKSUM_FAILS DMA_TIMEOUT PORT_NOT_AVAILABLE ARP_IP_NOT_MATCHED EAPoL_PACKET_FAILURE INCORRECT_IPV4_HLEN IPV4_NO_OPTIONS TX_QUEUED IPV6_CHECKSUM_FAILS IPV6_LOCAL_ADDR_RESOLVE IPV6_LOCAL_ADDR_INVALID NO_GATEWAY ADDRESS_RESOLUTION GLOBAL_DESTINATION ARP_WRONG_HARDWARE_ADDR_TYPE ARP_WRONG_PROTOCOL_TYPE ARP_WRONG_HARDWARE_ADDR_LEN ARP_WRONG_PROTOCOL_LEN  ]
+"82 mcc_generated_files/TCPIPLibrary/udpv4.h
+[; ;mcc_generated_files/TCPIPLibrary/udpv4.h: 82: error_msg UDP_Start(uint32_t destIP, uint16_t srcPort, uint16_t dstPort);
+[v _UDP_Start `(E1078 ~T0 @X0 0 ef3`ul`us`us ]
+"40 mcc_generated_files/TCPIPLibrary/ip_database.h
+[; ;mcc_generated_files/TCPIPLibrary/ip_database.h: 40:  typedef struct {
+[s S37 `ul 1 `ul -> 2 `i `ul 1 `ul 1 `ul 1 `ul -> 2 `i `ul 1 ]
+[n S37 . ipv4_myAddress ipv4_dns ipv4_subnetMask ipv4_router ipv4_gateway ipv4_ntpAddress ipv4_tftpAddress ]
+"51
+[; ;mcc_generated_files/TCPIPLibrary/ip_database.h: 51: extern ip_db_info_t ip_database_info;
+[v _ip_database_info `S37 ~T0 @X0 0 e ]
+"39 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdlib.h: 39: int rand (void);
+[v _rand `(i ~T0 @X0 0 ef ]
+"118 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 118: void ETH_Write16(uint16_t);
+[v _ETH_Write16 `(v ~T0 @X0 0 ef1`us ]
+"117
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 117: void ETH_Write8(uint8_t);
+[v _ETH_Write8 `(v ~T0 @X0 0 ef1`uc ]
+"83 mcc_generated_files/TCPIPLibrary/udpv4.h
+[; ;mcc_generated_files/TCPIPLibrary/udpv4.h: 83: error_msg UDP_Send(void);
+[v _UDP_Send `(E1078 ~T0 @X0 0 ef ]
+"106 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 106: uint16_t ETH_Read16(void);
+[v _ETH_Read16 `(us ~T0 @X0 0 ef ]
+"108
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 108: uint32_t ETH_Read32(void);
+[v _ETH_Read32 `(ul ~T0 @X0 0 ef ]
+"105
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 105: uint8_t ETH_Read8(void);
+[v _ETH_Read8 `(uc ~T0 @X0 0 ef ]
+"39 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 39: int strcmp (const char *, const char *);
+[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"55 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\time.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\time.h: 55: time_t time (time_t *);
+[v _time `(o ~T0 @X0 0 ef1`*o ]
+"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"86 mcc_generated_files/TCPIPLibrary/physical_layer_interface.h
+[; ;mcc_generated_files/TCPIPLibrary/physical_layer_interface.h: 86: extern const mac48Address_t broadcastMAC = {0xff,0xff,0xff,0xff,0xff,0xff};
+[v _broadcastMAC `CS32 ~T0 @X0 1 e ]
+[i _broadcastMAC
+:U 0
+:U ..
+:U ..
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+..
+..
+..
+]
+"67 mcc_generated_files/TCPIPLibrary/dns_client.c
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 67: uint16_t dnsXidValue;
+[v _dnsXidValue `us ~T0 @X0 1 e ]
+"77
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 77: dns_map_t dnsCache[8];
+[v _dnsCache `S38 ~T0 @X0 -> 8 `i e ]
+"78
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 78: mac48Address_t ethMACdns;
+[v _ethMACdns `S32 ~T0 @X0 1 e ]
+"82
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 82: void DNS_Init(void)
+[v _DNS_Init `(v ~T0 @X0 1 ef ]
+"83
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 83: {
+{
+[e :U _DNS_Init ]
+[f ]
+"84
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 84:     srand(generateSeed());
+[e ( _srand (1 -> ( _generateSeed ..  `ui ]
+"85
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 85:  memset(dnsCache,0,sizeof(dnsCache));
+[e ( _memset (3 , , -> &U _dnsCache `*v -> 0 `i -> # _dnsCache `ui ]
+"86
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 86: }
+[e :UE 39 ]
+}
+"88
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 88: static int generateSeed(void)
+[v _generateSeed `(i ~T0 @X0 1 sf ]
+"89
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 89: {
+{
+[e :U _generateSeed ]
+[f ]
+"90
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 90:     int seed;
+[v _seed `i ~T0 @X0 1 a ]
+"91
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 91:     ETH_GetMAC((uint8_t *) &ethMACdns);
+[e ( _ETH_GetMAC (1 -> &U _ethMACdns `*uc ]
+"92
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 92:     seed = lfsrWithSeed(ethMACdns.mac_array[2]);
+[e = _seed -> ( _lfsrWithSeed (1 *U + &U . _ethMACdns 0 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ethMACdns 0 `ui `ux `i ]
+"93
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 93:     seed <<= 8;
+[e =<< _seed -> 8 `i ]
+"94
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 94:     seed |= lfsrWithSeed(ethMACdns.mac_array[3]);
+[e =| _seed -> ( _lfsrWithSeed (1 *U + &U . _ethMACdns 0 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ethMACdns 0 `ui `ux `i ]
+"95
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 95:     seed <<= 8;
+[e =<< _seed -> 8 `i ]
+"96
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 96:     seed |= lfsrWithSeed(ethMACdns.mac_array[4]);
+[e =| _seed -> ( _lfsrWithSeed (1 *U + &U . _ethMACdns 0 * -> -> -> 4 `i `ui `ux -> -> # *U &U . _ethMACdns 0 `ui `ux `i ]
+"97
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 97:     seed <<= 8;
+[e =<< _seed -> 8 `i ]
+"98
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 98:     seed |= lfsrWithSeed(ethMACdns.mac_array[5]);
+[e =| _seed -> ( _lfsrWithSeed (1 *U + &U . _ethMACdns 0 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _ethMACdns 0 `ui `ux `i ]
+"99
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 99:     return seed;
+[e ) _seed ]
+[e $UE 40  ]
+"100
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 100: }
+[e :UE 40 ]
+}
+"102
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 102: void DNS_Query(const char *str)
+[v _DNS_Query `(v ~T0 @X0 1 ef1`*Cuc ]
+"103
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 103: {
+{
+[e :U _DNS_Query ]
+"102
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 102: void DNS_Query(const char *str)
+[v _str `*Cuc ~T0 @X0 1 r1 ]
+"103
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 103: {
+[f ]
+"104
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 104:     uint8_t lock = 0 , i;
+[v _lock `uc ~T0 @X0 1 a ]
+[e = _lock -> -> 0 `i `uc ]
+[v _i `uc ~T0 @X0 1 a ]
+"105
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 105:     uint8_t len_str;
+[v _len_str `uc ~T0 @X0 1 a ]
+"106
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 106:     len_str = strlen((char*)str);
+[e = _len_str -> ( _strlen (1 -> -> _str `*uc `*Cuc `uc ]
+"107
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 107:     error_msg started;
+[v _started `E1078 ~T0 @X0 1 a ]
+"108
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 108:     dns_map_t *entryPointer;
+[v _entryPointer `*S38 ~T0 @X0 1 a ]
+"109
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 109:     dns_map_t *oldestEntry;
+[v _oldestEntry `*S38 ~T0 @X0 1 a ]
+"110
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 110:     time_t oldestAge;
+[v _oldestAge `o ~T0 @X0 1 a ]
+"114
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 114:     entryPointer = dnsCache;
+[e = _entryPointer &U _dnsCache ]
+"115
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 115:     oldestEntry = entryPointer;
+[e = _oldestEntry _entryPointer ]
+"116
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 116:     oldestAge = entryPointer->birthSecond;
+[e = _oldestAge . *U _entryPointer 4 ]
+"119
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 119:     for(unsigned x=0;x<(sizeof(dnsCache) / sizeof(*(dnsCache)));x++)
+{
+[v _x `ui ~T0 @X0 1 a ]
+[e = _x -> -> 0 `i `ui ]
+[e $ < _x / -> # _dnsCache `ui -> # *U &U _dnsCache `ui 42  ]
+[e $U 43  ]
+[e :U 42 ]
+"120
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 120:     {
+{
+"121
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 121:         if(entryPointer->birthSecond > oldestAge )
+[e $ ! > . *U _entryPointer 4 _oldestAge 45  ]
+"122
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 122:         {
+{
+"123
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 123:             oldestAge = entryPointer->birthSecond;
+[e = _oldestAge . *U _entryPointer 4 ]
+"124
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 124:             oldestEntry = entryPointer;
+[e = _oldestEntry _entryPointer ]
+"125
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 125:         }
+}
+[e :U 45 ]
+"126
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 126:         entryPointer ++;
+[e ++ _entryPointer * -> -> 1 `i `x -> -> # *U _entryPointer `i `x ]
+"127
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 127:     }
+}
+[e ++ _x -> -> 1 `i `ui ]
+[e $ < _x / -> # _dnsCache `ui -> # *U &U _dnsCache `ui 42  ]
+[e :U 43 ]
+}
+"128
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 128:     entryPointer = oldestEntry;
+[e = _entryPointer _oldestEntry ]
+"130
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 130:     started = UDP_Start((ip_database_info.ipv4_dns[0]),53,53);
+[e = _started ( _UDP_Start (3 , , *U + &U . _ip_database_info 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _ip_database_info 1 `ui `ux -> -> 53 `i `us -> -> 53 `i `us ]
+"131
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 131:  dnsXidValue = rand()*rand();
+[e = _dnsXidValue -> * ( _rand ..  ( _rand ..  `us ]
+"132
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 132:     if(started==SUCCESS)
+[e $ ! == -> _started `ui -> . `E1078 1 `ui 46  ]
+"133
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 133:     {
+{
+"135
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 135:         ETH_Write16(dnsXidValue);
+[e ( _ETH_Write16 (1 _dnsXidValue ]
+"136
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 136:         ETH_Write16(0x0100);
+[e ( _ETH_Write16 (1 -> -> 256 `i `us ]
+"137
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 137:         ETH_Write16(0x0001);
+[e ( _ETH_Write16 (1 -> -> 1 `i `us ]
+"138
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 138:         ETH_Write16(0x0000);
+[e ( _ETH_Write16 (1 -> -> 0 `i `us ]
+"139
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 139:         ETH_Write16(0x0000);
+[e ( _ETH_Write16 (1 -> -> 0 `i `us ]
+"140
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 140:         ETH_Write16(0x0000);
+[e ( _ETH_Write16 (1 -> -> 0 `i `us ]
+"143
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 143:         for(i = 0 ; i <= len_str ; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 50  ]
+[e :U 47 ]
+"144
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 144:         {
+{
+"145
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 145:             if(str[i]=='.' || str[i]=='\0')
+[e $ ! || == -> *U + _str * -> _i `ux -> -> # *U _str `ui `ux `ui -> 46 `ui == -> *U + _str * -> _i `ux -> -> # *U _str `ui `ux `ui -> 0 `ui 51  ]
+"146
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 146:             {
+{
+"148
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 148:                 ETH_Write8(i-lock);
+[e ( _ETH_Write8 (1 -> - -> _i `i -> _lock `i `uc ]
+"149
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 149:                 for(;lock<i;lock++)
+{
+[e $U 55  ]
+[e :U 52 ]
+"150
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 150:                 {
+{
+"152
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 152:                     ETH_Write8(str[lock]);
+[e ( _ETH_Write8 (1 -> *U + _str * -> _lock `ux -> -> # *U _str `ui `ux `uc ]
+"153
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 153:                 }
+}
+[e ++ _lock -> -> 1 `i `uc ]
+[e :U 55 ]
+[e $ < -> _lock `i -> _i `i 52  ]
+[e :U 53 ]
+}
+"155
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 155:                 lock=i+1;
+[e = _lock -> + -> _i `i -> 1 `i `uc ]
+"156
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 156:             }
+}
+[e :U 51 ]
+"157
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 157:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 50 ]
+[e $ <= -> _i `i -> _len_str `i 47  ]
+[e :U 48 ]
+}
+"158
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 158:         ETH_Write8(0x00);
+[e ( _ETH_Write8 (1 -> -> 0 `i `uc ]
+"160
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 160:         ETH_Write16(0x0001);
+[e ( _ETH_Write16 (1 -> -> 1 `i `us ]
+"161
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 161:         ETH_Write16(0x0001);
+[e ( _ETH_Write16 (1 -> -> 1 `i `us ]
+"163
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 163:         UDP_Send();
+[e ( _UDP_Send ..  ]
+"164
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 164:         entryPointer->dnsName = str;
+[e = . *U _entryPointer 0 _str ]
+"165
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 165:         entryPointer->isValid = 0;
+[e = . *U _entryPointer 3 -> -> 0 `i `a ]
+"166
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 166:     }
+}
+[e :U 46 ]
+"168
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 168: }
+[e :UE 41 ]
+}
+"170
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 170: void DNS_Handler(int16_t length)
+[v _DNS_Handler `(v ~T0 @X0 1 ef1`s ]
+"171
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 171: {
+{
+[e :U _DNS_Handler ]
+"170
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 170: void DNS_Handler(int16_t length)
+[v _length `s ~T0 @X0 1 r1 ]
+"171
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 171: {
+[f ]
+"172
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 172:     uint16_t v;
+[v _v `us ~T0 @X0 1 a ]
+"173
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 173:     unsigned char dnsR[255];
+[v _dnsR `uc ~T0 @X0 -> 255 `i a ]
+"174
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 174:     uint16_t answer, authorityRR;
+[v _answer `us ~T0 @X0 1 a ]
+[v _authorityRR `us ~T0 @X0 1 a ]
+"175
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 175:     uint32_t ipAddress;
+[v _ipAddress `ul ~T0 @X0 1 a ]
+"176
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 176:     uint32_t ttl;
+[v _ttl `ul ~T0 @X0 1 a ]
+"177
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 177:     uint16_t type, dataLength;
+[v _type `us ~T0 @X0 1 a ]
+[v _dataLength `us ~T0 @X0 1 a ]
+"179
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 179:     dns_map_t *entryPointer;
+[v _entryPointer `*S38 ~T0 @X0 1 a ]
+"180
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 180:     uint8_t i, nameLen,lock =0;
+[v _i `uc ~T0 @X0 1 a ]
+[v _nameLen `uc ~T0 @X0 1 a ]
+[v _lock `uc ~T0 @X0 1 a ]
+[e = _lock -> -> 0 `i `uc ]
+"184
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 184:     entryPointer = dnsCache;
+[e = _entryPointer &U _dnsCache ]
+"186
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 186:     if(length > 12)
+[e $ ! > -> _length `i -> 12 `i 57  ]
+"187
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 187:     {
+{
+"188
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 188:         v = ETH_Read16();
+[e = _v ( _ETH_Read16 ..  ]
+"189
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 189:         if(v == dnsXidValue)
+[e $ ! == -> _v `ui -> _dnsXidValue `ui 58  ]
+"190
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 190:         {
+{
+"191
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 191:             ETH_Read32();
+[e ( _ETH_Read32 ..  ]
+"192
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 192:             answer = ETH_Read16();
+[e = _answer ( _ETH_Read16 ..  ]
+"193
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 193:             authorityRR = ETH_Read16();
+[e = _authorityRR ( _ETH_Read16 ..  ]
+"194
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 194:             ETH_Read16();
+[e ( _ETH_Read16 ..  ]
+"195
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 195:             length -= 12;
+[e =- _length -> -> 12 `i `s ]
+"197
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 197:            if(length > 0)
+[e $ ! > -> _length `i -> 0 `i 59  ]
+"198
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 198:             {
+{
+"199
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 199:                 while((nameLen=ETH_Read8())!= 0x00)
+[e $U 60  ]
+[e :U 61 ]
+"200
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 200:                 {
+{
+"201
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 201:                     while(nameLen--)
+[e $U 63  ]
+[e :U 64 ]
+"202
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 202:                     {
+{
+"203
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 203:                         dnsR[lock] = ETH_Read8();
+[e = *U + &U _dnsR * -> _lock `ux -> -> # *U &U _dnsR `ui `ux ( _ETH_Read8 ..  ]
+"204
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 204:                         lock++;
+[e ++ _lock -> -> 1 `i `uc ]
+"205
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 205:                     }
+}
+[e :U 63 ]
+"201
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 201:                     while(nameLen--)
+[e $ != -> -- _nameLen -> -> 1 `i `uc `i -> 0 `i 64  ]
+[e :U 65 ]
+"206
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 206:                     dnsR[lock] = '.';
+[e = *U + &U _dnsR * -> _lock `ux -> -> # *U &U _dnsR `ui `ux -> -> 46 `ui `uc ]
+"207
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 207:                     lock++;
+[e ++ _lock -> -> 1 `i `uc ]
+"208
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 208:                 }
+}
+[e :U 60 ]
+"199
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 199:                 while((nameLen=ETH_Read8())!= 0x00)
+[e $ != -> = _nameLen ( _ETH_Read8 ..  `i -> 0 `i 61  ]
+[e :U 62 ]
+"209
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 209:                 dnsR[lock-1] ='\0';
+[e = *U + &U _dnsR * -> -> - -> _lock `i -> 1 `i `ui `ux -> -> # *U &U _dnsR `ui `ux -> -> 0 `ui `uc ]
+"211
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 211:                 ETH_Read32();
+[e ( _ETH_Read32 ..  ]
+"212
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 212:                length -= lock + 5;
+[e =- _length -> + -> _lock `i -> 5 `i `s ]
+"214
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 214:                 while(answer)
+[e $U 66  ]
+[e :U 67 ]
+"215
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 215:                 {
+{
+"216
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 216:                     ETH_Read16();
+[e ( _ETH_Read16 ..  ]
+"217
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 217:                     type = ETH_Read16();
+[e = _type ( _ETH_Read16 ..  ]
+"218
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 218:                     ETH_Read16();
+[e ( _ETH_Read16 ..  ]
+"219
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 219:                     ttl = ETH_Read32();
+[e = _ttl ( _ETH_Read32 ..  ]
+"220
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 220:                     dataLength = ETH_Read16();
+[e = _dataLength ( _ETH_Read16 ..  ]
+"221
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 221:                     if(type == 0x0001)
+[e $ ! == -> _type `ui -> -> 1 `i `ui 69  ]
+"222
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 222:                     {
+{
+"223
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 223:                         ipAddress = ETH_Read32();
+[e = _ipAddress ( _ETH_Read32 ..  ]
+"224
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 224:                     }
+}
+[e $U 70  ]
+"225
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 225:                     else
+[e :U 69 ]
+"226
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 226:                     {
+{
+"227
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 227:                         while(dataLength--) ETH_Read8();
+[e $U 71  ]
+[e :U 72 ]
+[e ( _ETH_Read8 ..  ]
+[e :U 71 ]
+[e $ != -> -- _dataLength -> -> 1 `i `us `ui -> -> 0 `i `ui 72  ]
+[e :U 73 ]
+"228
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 228:                         length -=14+dataLength;
+[e =- _length -> + -> -> 14 `i `ui -> _dataLength `ui `s ]
+"229
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 229:                     }
+}
+[e :U 70 ]
+"235
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 235:                     answer--;
+[e -- _answer -> -> 1 `i `us ]
+"236
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 236:                 }
+}
+[e :U 66 ]
+"214
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 214:                 while(answer)
+[e $ != -> _answer `ui -> -> 0 `i `ui 67  ]
+[e :U 68 ]
+"237
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 237:             }
+}
+[e :U 59 ]
+"238
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 238:         }
+}
+[e :U 58 ]
+"240
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 240:         dns_map_t *dnsPtr = dnsCache;
+[v _dnsPtr `*S38 ~T0 @X0 1 a ]
+[e = _dnsPtr &U _dnsCache ]
+"241
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 241:         for(uint8_t x=8; x !=0; x--)
+{
+[v _x `uc ~T0 @X0 1 a ]
+[e = _x -> -> 8 `i `uc ]
+[e $ != -> _x `i -> 0 `i 74  ]
+[e $U 75  ]
+[e :U 74 ]
+"242
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 242:         {
+{
+"243
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 243:             if(entryPointer->birthSecond < dnsPtr->birthSecond)
+[e $ ! < . *U _entryPointer 4 . *U _dnsPtr 4 77  ]
+"244
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 244:             {
+{
+"245
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 245:                 entryPointer = dnsPtr;
+[e = _entryPointer _dnsPtr ]
+"246
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 246:             }
+}
+[e :U 77 ]
+"248
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 248:             dnsPtr++;
+[e ++ _dnsPtr * -> -> 1 `i `x -> -> # *U _dnsPtr `i `x ]
+"249
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 249:         }
+}
+[e -- _x -> -> 1 `i `uc ]
+[e $ != -> _x `i -> 0 `i 74  ]
+[e :U 75 ]
+}
+"250
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 250:         for(i = 0; i < (sizeof(dnsCache) / sizeof(*(dnsCache)));i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui / -> # _dnsCache `ui -> # *U &U _dnsCache `ui 78  ]
+[e $U 79  ]
+[e :U 78 ]
+"251
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 251:         {
+{
+"252
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 252:             if(strcmp(entryPointer->dnsName, (char *)dnsR) == 0)
+[e $ ! == ( _strcmp (2 , . *U _entryPointer 0 -> -> &U _dnsR `*uc `*Cuc -> 0 `i 81  ]
+"253
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 253:             {
+{
+"256
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 256:                 entryPointer->birthSecond = time(0);
+[e = . *U _entryPointer 4 ( _time (1 -> -> 0 `i `*o ]
+"257
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 257:                 entryPointer->ipAddress = ipAddress;
+[e = . *U _entryPointer 1 _ipAddress ]
+"258
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 258:                 entryPointer->ttl = ttl;
+[e = . *U _entryPointer 2 _ttl ]
+"259
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 259:                 entryPointer->isValid = 1;
+[e = . *U _entryPointer 3 -> -> 1 `i `a ]
+"260
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 260:                 break;
+[e $U 79  ]
+"261
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 261:             }
+}
+[e :U 81 ]
+"262
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 262:             entryPointer ++;
+[e ++ _entryPointer * -> -> 1 `i `x -> -> # *U _entryPointer `i `x ]
+"263
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 263:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui / -> # _dnsCache `ui -> # *U &U _dnsCache `ui 78  ]
+[e :U 79 ]
+}
+"264
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 264:     }
+}
+[e :U 57 ]
+"265
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 265: }
+[e :UE 56 ]
+}
+"267
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 267: void DNS_Update(void)
+[v _DNS_Update `(v ~T0 @X0 1 ef ]
+"268
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 268: {
+{
+[e :U _DNS_Update ]
+[f ]
+"269
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 269: }
+[e :UE 82 ]
+}
+"271
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 271: uint32_t DNS_Lookup(const char *dnsName)
+[v _DNS_Lookup `(ul ~T0 @X0 1 ef1`*Cuc ]
+"272
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 272: {
+{
+[e :U _DNS_Lookup ]
+"271
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 271: uint32_t DNS_Lookup(const char *dnsName)
+[v _dnsName `*Cuc ~T0 @X0 1 r1 ]
+"272
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 272: {
+[f ]
+"273
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 273:     dns_map_t *entryPointer = dnsCache;
+[v _entryPointer `*S38 ~T0 @X0 1 a ]
+[e = _entryPointer &U _dnsCache ]
+"274
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 274:     uint8_t x;
+[v _x `uc ~T0 @X0 1 a ]
+"278
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 278:     for(x=0;x<8;x++)
+{
+[e = _x -> -> 0 `i `uc ]
+[e $ < -> _x `i -> 8 `i 84  ]
+[e $U 85  ]
+[e :U 84 ]
+"279
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 279:     {
+{
+"280
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 280:         if(entryPointer->isValid)
+[e $ ! != -> . *U _entryPointer 3 `i -> 0 `i 87  ]
+"281
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 281:         {
+{
+"282
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 282:             if(strcmp(entryPointer->dnsName, dnsName)==0)
+[e $ ! == ( _strcmp (2 , . *U _entryPointer 0 _dnsName -> 0 `i 88  ]
+"283
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 283:             {
+{
+"284
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 284:                 char str[80];
+[v _str `uc ~T0 @X0 -> 80 `i a ]
+"285
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 285:                 sprintf(str,"DNS Found %s in cache %ul",dnsName, entryPointer->ipAddress);
+[e ( _sprintf (1 , , (. , &U _str :s 1C _dnsName . *U _entryPointer 1 ]
+"287
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 287:                 return entryPointer->ipAddress;
+[e ) . *U _entryPointer 1 ]
+[e $UE 83  ]
+"288
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 288:             }
+}
+[e :U 88 ]
+"289
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 289:         }
+}
+[e :U 87 ]
+"290
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 290:         entryPointer ++;
+[e ++ _entryPointer * -> -> 1 `i `x -> -> # *U _entryPointer `i `x ]
+"291
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 291:     }
+}
+[e ++ _x -> -> 1 `i `uc ]
+[e $ < -> _x `i -> 8 `i 84  ]
+[e :U 85 ]
+}
+"292
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 292:     DNS_Query(dnsName);
+[e ( _DNS_Query (1 _dnsName ]
+"293
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 293:     return 0;
+[e ) -> -> -> 0 `i `l `ul ]
+[e $UE 83  ]
+"294
+[; ;mcc_generated_files/TCPIPLibrary/dns_client.c: 294: }
+[e :UE 83 ]
+}
+[p f _sprintf 8651776 ]
+[a 1C 68 78 83 32 70 111 117 110 100 32 37 115 32 105 110 32 99 97 99 104 101 32 37 117 108 0 ]
